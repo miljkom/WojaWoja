@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1240056195489929718}
   - component: {fileID: 1240056195489929719}
-  - component: {fileID: 4215265536320479103}
+  - component: {fileID: 2499297302031542376}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: BulletDiagonalBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4215265536320479103
+--- !u!114 &2499297302031542376
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,7 +94,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1240056195489929716}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e29c18a8f4ec91544aecfce1527a15a7, type: 3}
+  m_Script: {fileID: 11500000, guid: d3f952c524b2bc24e8b80f636a45a34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootSpeed: 5
+  speed: 5
+  direction: -1
+  topBound: {fileID: 401812929646705159, guid: ab917c9b9c493964cb020156ecbe1629, type: 3}
+  bottomBound: {fileID: 3900186097610679563, guid: 2f3df015ee5f468419ef85edbe2781c0, type: 3}
