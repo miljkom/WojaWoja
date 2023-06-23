@@ -1,17 +1,21 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    private Transform endpoint;
-    private float speed;
-    private float health;
+    public float speed;
+    public float health;
 
-    public EnemyMovement(Transform endpoint, float speed, float health)
+    public EnemyMovement(float speed, float health)
     {
-        this.endpoint = endpoint;
         this.speed = speed;
         this.health = health;
+    }
+
+    private void Update()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, GameManager.Instance.voja.transform.position, speed * Time.deltaTime);
     }
 }
