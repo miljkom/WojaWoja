@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84833f55b9b405b4d814f8d89bb565c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1240056195489929716, guid: 0608fe7e3f35d0a4d81c92ac86d233b3, type: 3}
+  bullet: {fileID: 1240056195489929716, guid: 53a627e84599252438f563c869b2b6ab, type: 3}
   bulletUp: {fileID: 1240056195489929716, guid: 7946909d6ec4c8e4098ab175b272258e, type: 3}
   bulletDown: {fileID: 1240056195489929716, guid: b5ac6aec3a76012488b198f5a6b11951, type: 3}
 --- !u!50 &2533252298453217192
