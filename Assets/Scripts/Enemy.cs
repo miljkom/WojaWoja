@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour
         if (col.CompareTag("Bullet"))
         {
             health -= 25f;
+            Destroy(col.gameObject);
         }
-        Destroy(col.gameObject);
     }
 }

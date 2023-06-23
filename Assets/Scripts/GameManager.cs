@@ -10,6 +10,7 @@ public class GameManager: Singleton<GameManager>
 
         [SerializeField] private List<GameObject> waypoints;
         [SerializeField] private GameObject enemy;
+        [SerializeField] private GameObject shootingEnemy;
         [SerializeField] public GameObject voja;
 
         public bool spawn;
@@ -30,7 +31,11 @@ public class GameManager: Singleton<GameManager>
         private IEnumerator SpawnEnemies()
         {
             spawn = false;
-            var go =  Instantiate(enemy, waypoints[Random.Range(0,8)].transform.position, Quaternion.identity);
+            var enemyType = Random.Range(0, 10);
+            if(enemyType < 9)
+                Instantiate(enemy, waypoints[Random.Range(0,8)].transform.position, Quaternion.identity);
+            if(enemyType < 10)
+                Instantiate(shootingEnemy, waypoints[Random.Range(0,8)].transform.position, Quaternion.identity);
             yield return new WaitForSeconds(2f);
             spawn = true;
         }

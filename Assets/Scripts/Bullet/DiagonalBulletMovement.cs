@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class DiagonalBulletMovement : MonoBehaviour
@@ -11,6 +10,7 @@ public class DiagonalBulletMovement : MonoBehaviour
     private Transform _transform;
     private float _topY;
     private float _bottomY;
+    
     private void Awake()
     {
         _transform = transform;
