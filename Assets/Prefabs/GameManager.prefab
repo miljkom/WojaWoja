@@ -45,13 +45,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  enemy: {fileID: 0}
-  voja: {fileID: 0}
+  - {fileID: 2320908930753701494, guid: 9fdb8e1db6595d746bd8a0259f9ab608, type: 3}
+  - {fileID: 2805741456939014038, guid: b202cdcbd9c888c44861540193d33736, type: 3}
+  - {fileID: 2910865692886303868, guid: d6b77365aab65e2479ce7215cfb5e228, type: 3}
+  - {fileID: 687652914961638815, guid: cff7f2719cf3d4c44ada5b4961183d85, type: 3}
+  - {fileID: 9034401029978044743, guid: 009a4d229ceb7eb44900748ca206bcc1, type: 3}
+  - {fileID: 8542343207532335416, guid: db5ea05eef598464abfe3bcf421d0c8c, type: 3}
+  - {fileID: 1411697093594331017, guid: 054444d5930e37c42a96783ea759a00f, type: 3}
+  - {fileID: 4534473720343557698, guid: c38f69b97ba3dc740a9f379c16046a09, type: 3}
+  enemy: {fileID: 3358574256798413147, guid: e6b4b5a259c42064ebb358f03e74d0e3, type: 3}
+  voja: {fileID: 1784964433545604526, guid: 7c3b70f4a1d719f45b2ee4e250462f65, type: 3}
+  spawn: 0

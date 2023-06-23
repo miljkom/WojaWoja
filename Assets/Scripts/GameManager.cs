@@ -31,10 +31,6 @@ public class GameManager: Singleton<GameManager>
         {
             spawn = false;
             var go =  Instantiate(enemy, waypoints[Random.Range(0,8)].transform.position, Quaternion.identity);
-            go.AddComponent<EnemyMovement>();
-            var enemyMovement = go.GetComponent<EnemyMovement>();
-            enemyMovement.health = 50f;
-            enemyMovement.speed = 2f;
             yield return new WaitForSeconds(2f);
             spawn = true;
         }
