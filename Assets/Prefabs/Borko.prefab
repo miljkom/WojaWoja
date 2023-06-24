@@ -109,6 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnBulletsInSeconds: 0.2
   enemyBullet: {fileID: 1240056195489929716, guid: 6c78c5a0d3c38de4ab8cba66daff18cf, type: 3}
+  spawnPointBorko: {fileID: 7006939094529008785}
   borkoLimit: 5
 --- !u!50 &404408302785468429
 Rigidbody2D:
@@ -686,6 +687,7 @@ GameObject:
   - component: {fileID: 4828301989955152206}
   - component: {fileID: 4828301989955152205}
   - component: {fileID: 970644804403151603}
+  - component: {fileID: 3758986665973592002}
   m_Layer: 0
   m_Name: BasicEnemyScale
   m_TagString: Untagged
@@ -742,6 +744,18 @@ SortingGroup:
   m_SortingLayerID: 887888619
   m_SortingLayer: 2
   m_SortingOrder: 0
+--- !u!114 &3758986665973592002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4828301989955152207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 835c8473a94a999408c0300b82044210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4828301989961540538
 GameObject:
   m_ObjectHideFlags: 0

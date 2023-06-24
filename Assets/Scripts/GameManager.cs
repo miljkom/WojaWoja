@@ -18,7 +18,6 @@ public class GameManager : Singleton<GameManager>
     public GameObject barricade;
     public GameObject realBarricade;
     public GameObject tiredness;
-    public GameObject borkoPointer;
 
     private int waypointsCount;
     public bool DestroyBarricade { get; set; }
@@ -54,7 +53,7 @@ public class GameManager : Singleton<GameManager>
     }
     public void SpawnFriendly1()
     {
-        borkoPointer = Instantiate(friendly1, waypoints[Random.Range(0, waypointsCount)].transform.position, Quaternion.identity);
+        Instantiate(friendly1, waypoints[Random.Range(0, waypointsCount)].transform.position, Quaternion.identity);
     }
 
 
