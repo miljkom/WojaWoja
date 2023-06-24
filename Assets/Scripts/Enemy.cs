@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     public float health;
 
     private float startingSpeed;
+    private bool _isDead = false;
     
     private void Awake()
     {
@@ -18,16 +19,18 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        if (health <= 0)
+        if (health <= 0 && !_isDead)
         {
             Player.Instance.charger += 0.1f;
-            Destroy(gameObject);
+            _isDead = true;
+            KillEnemy();
         }
         //transform.position = Vector3.MoveTowards(transform.position, GameManager.Instance.voja.transform.position, speed * Time.deltaTime); 
         transform.Translate(Vector3.left * speed * Time.deltaTime);
-        if (GameManager.Instance.DestroyBarricade)
+        if (GameManager.Instance.realBarricade.IsDestroyed())
         {
-            speed = startingSpeed;
+            speed = 2f;
+            GetComponentInChildren<Animator>().SetBool("IsWalking", true);
         }
     }
 
@@ -36,6 +39,7 @@ public class Enemy : MonoBehaviour
         if (col.gameObject.CompareTag("Bullet"))
         {
             health -= 25f;
+            GetComponentInChildren<Animator>().Play("BasicEnemy_Flich");
             Destroy(col.gameObject);
         }
 
@@ -46,6 +50,7 @@ public class Enemy : MonoBehaviour
         if (col.CompareTag("Blocker"))
         {
             speed = 0;
+            GetComponentInChildren<Animator>().SetBool("IsWalking", false);
         }
     }
 
@@ -55,5 +60,12 @@ public class Enemy : MonoBehaviour
         {
             speed = 2f;
         }
+    }
+
+    public void KillEnemy()
+    {
+        speed = 0;
+        GetComponentInChildren<Animator>().Play("BasicEnemy_Death");
+        GetComponent<BoxCollider2D>().enabled = false;
     }
 }

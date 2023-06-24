@@ -15,6 +15,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] public GameObject voja;
     [SerializeField] private Image chargerImage;
     public GameObject barricade;
+    public GameObject realBarricade;
     public GameObject tiredness;
 
     private int waypointsCount;
@@ -24,7 +25,7 @@ public class GameManager : Singleton<GameManager>
     {
         Application.targetFrameRate = GameConstants.Instance.GameFps;
         waypointsCount = waypoints.Count;
-        Instantiate(barricade);
+        realBarricade = Instantiate(barricade);
     }
 
     private void Update()

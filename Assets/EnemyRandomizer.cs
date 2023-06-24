@@ -29,4 +29,9 @@ public class EnemyRandomizer : MonoBehaviour
         leftFoot[randomizeFoot].SetActive(true);
         rightFoot[randomizeFoot].SetActive(true);
     }
+
+    public void KillEnemy()
+    {
+        Destroy(transform.parent.gameObject);
+    }
 }
