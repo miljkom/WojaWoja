@@ -14,6 +14,7 @@ public class ShootBullet : MonoBehaviour
         {
             Instantiate(bullet, transform.position + Vector3.right, quaternion.identity);
             _animator.Play("Voja_Shoot");
+            _animator.Play("Voja_IndikatorScale");
             Player.Instance.tiredness += 0.1f;
         }
     }
