@@ -20,11 +20,6 @@ public class Barricade : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("EnemyBullet"))
-        {
-            health -= 3f;
-            Destroy(col.gameObject);
-        }
         if (col.CompareTag("Enemy"))
         {
             inside = true;

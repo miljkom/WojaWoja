@@ -2213,6 +2213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1240056195489929716, guid: 53a627e84599252438f563c869b2b6ab, type: 3}
+  gigaBullet: {fileID: 1240056195489929716, guid: acdb2a0c687b0e2458e793bb350482e5, type: 3}
   _animator: {fileID: 1915632657}
   spawnPointBullet: {fileID: 4195092940685671154}
 --- !u!50 &2533252298453217192
@@ -2276,6 +2277,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   tiredness: 0
+  fresh: 1
+  charger: 0
 --- !u!1 &2125180561941769416
 GameObject:
   m_ObjectHideFlags: 0

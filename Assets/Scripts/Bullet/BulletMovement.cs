@@ -20,7 +20,8 @@ public class BulletMovement : MonoBehaviour
     {
         if (col.CompareTag("EnemyBullet"))
         {
-            Destroy(gameObject);
+            if(!gameObject.CompareTag("Charger"))
+                Destroy(gameObject);
             Destroy(col.gameObject);
         }
     }

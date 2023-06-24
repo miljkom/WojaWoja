@@ -32,6 +32,10 @@ public class Enemy : MonoBehaviour
             Destroy(col.gameObject);
         }
 
+        if (col.gameObject.CompareTag("Charger"))
+        {
+            health -= 50f;
+        }
         if (col.CompareTag("Blocker"))
         {
             speed = 0;

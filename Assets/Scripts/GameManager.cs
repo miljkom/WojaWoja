@@ -12,8 +12,8 @@ public class GameManager : Singleton<GameManager>
 {
     [SerializeField] private List<GameObject> waypoints;
     [SerializeField] private GameObject enemy;
-    [FormerlySerializedAs("shootingEnemy")] [SerializeField] private GameObject advanced1;
-    [FormerlySerializedAs("shooting3DEnemy")] [SerializeField] private GameObject advanced2;
+    [SerializeField] private GameObject advanced1;
+    [SerializeField] private GameObject advanced2;
     [SerializeField] private GameObject advanced3;
     [SerializeField] public GameObject voja;
     [SerializeField] private Image chargerImage;
@@ -57,7 +57,8 @@ public class GameManager : Singleton<GameManager>
 
     public void SpawnNormal()
     {
-        Instantiate(enemy, waypoints[Random.Range(0, waypointsCount)].transform.position, Quaternion.identity);
+        Instantiate(enemy, waypoints[Random.Range(0, 8)].transform.position, Quaternion.identity);
+
     }
 
 
