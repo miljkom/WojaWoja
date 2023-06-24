@@ -133,7 +133,10 @@ MonoBehaviour:
   - 110
   - 111
   advanced3Spawner: []
-  borko: {fileID: 0}
+  friendly1Spawner:
+  - 5
+  - 10
+  borko: {fileID: 5678477585441358742}
 --- !u!82 &5678477585441358742
 AudioSource:
   m_ObjectHideFlags: 0

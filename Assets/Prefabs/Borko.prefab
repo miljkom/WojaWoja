@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1370838542154527932}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.1, y: 0.000000029802322, z: 0}
+  m_LocalPosition: {x: -1.2, y: 0.000000029802322, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -109,6 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnBulletsInSeconds: 0.2
   enemyBullet: {fileID: 1240056195489929716, guid: 6c78c5a0d3c38de4ab8cba66daff18cf, type: 3}
+  borkoLimit: 5
 --- !u!50 &404408302785468429
 Rigidbody2D:
   serializedVersion: 4
@@ -142,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451c56f7a0e0cc441bdf70f1398ac922, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 6
   health: 75
 --- !u!82 &7603372053658391030
 AudioSource:

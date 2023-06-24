@@ -8,6 +8,7 @@ public class EnemySpawnBullet : MonoBehaviour
     [SerializeField] private float spawnBulletsInSeconds;
     [SerializeField] private GameObject enemyBullet;
     private bool isBorko;
+    public int borkoLimit;
     private void Start()
     {
         if (gameObject.CompareTag("Borko"))
@@ -24,14 +25,20 @@ public class EnemySpawnBullet : MonoBehaviour
 
     private IEnumerator SpawnEnemyBullets()
     {
+        int bullets = 0;
         while (true)
         {
             yield return new WaitForSeconds(spawnBulletsInSeconds);
-            if (isBorko)
+            switch (isBorko)
             {
-                Instantiate(enemyBullet, gameObject.transform.GetChild(0).transform);
+                case true when borkoLimit > bullets:
+                    bullets++;
+                    Instantiate(enemyBullet, GameManager.Instance.borkoPointer.transform.GetChild(0).transform);
+                    break;
+                case false:
+                    Instantiate(enemyBullet, transform.position + Vector3.left, quaternion.identity);
+                    break;
             }
-            Instantiate(enemyBullet, transform.position + Vector3.left, quaternion.identity);
         }
     }
 }

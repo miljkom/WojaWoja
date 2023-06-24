@@ -11,12 +11,14 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private GameObject advanced1;
     [SerializeField] private GameObject advanced2;
     [SerializeField] private GameObject advanced3;
-    [SerializeField] private GameObject borko;
+    [SerializeField] private GameObject friendly1;
+    [SerializeField] private GameObject friendly2;
     [SerializeField] public GameObject voja;
     [SerializeField] private Image chargerImage;
     public GameObject barricade;
     public GameObject realBarricade;
     public GameObject tiredness;
+    public GameObject borkoPointer;
 
     private int waypointsCount;
     public bool DestroyBarricade { get; set; }
@@ -49,6 +51,10 @@ public class GameManager : Singleton<GameManager>
     public void SpawnAdvanced2()
     {
         Instantiate(advanced2, waypoints[Random.Range(0, waypointsCount)].transform.position, Quaternion.identity);
+    }
+    public void SpawnFriendly1()
+    {
+        borkoPointer = Instantiate(friendly1, waypoints[Random.Range(0, waypointsCount)].transform.position, Quaternion.identity);
     }
 
 

@@ -2233,7 +2233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  xAxisMovement: 15
+  xAxisMovement: 20
   topBound: {fileID: 401812929646705159, guid: ab917c9b9c493964cb020156ecbe1629, type: 3}
   bottomBound: {fileID: 3900186097610679563, guid: 2f3df015ee5f468419ef85edbe2781c0, type: 3}
 --- !u!114 &227646208

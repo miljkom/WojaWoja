@@ -501,10 +501,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Voja
       objectReference: {fileID: 0}
-    - target: {fileID: 5138690323077383302, guid: 7c3b70f4a1d719f45b2ee4e250462f65, type: 3}
-      propertyPath: xAxisMovement
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c3b70f4a1d719f45b2ee4e250462f65, type: 3}
 --- !u!1 &854893487 stripped
