@@ -3220,6 +3220,7 @@ GameObject:
   - component: {fileID: 7336616925292993382}
   - component: {fileID: 7336616925292993383}
   - component: {fileID: 1048711745533581899}
+  - component: {fileID: 2141111647973885971}
   m_Layer: 0
   m_Name: BasicEnemyScale
   m_TagString: Untagged
@@ -3310,6 +3311,17 @@ MonoBehaviour:
   - {fileID: 7336616923798100336}
   - {fileID: 7336616925160810560}
   - {fileID: 7336616925112771359}
+--- !u!210 &2141111647973885971
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7336616925292993385}
+  m_Enabled: 1
+  m_SortingLayerID: 887888619
+  m_SortingLayer: 2
+  m_SortingOrder: 0
 --- !u!1 &7336616925333417902
 GameObject:
   m_ObjectHideFlags: 0
