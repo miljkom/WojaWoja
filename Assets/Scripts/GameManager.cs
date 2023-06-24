@@ -12,13 +12,16 @@ public class GameManager: Singleton<GameManager>
         [SerializeField] private GameObject enemy;
         [SerializeField] private GameObject shootingEnemy;
         [SerializeField] private GameObject shooting3DEnemy;
-        [SerializeField] public GameObject voja;
+        public GameObject voja;
+        public GameObject barricade;
+        public GameObject tiredness;
 
         public bool spawn;
 
         private void Start()
         {
             spawn = true;
+            Instantiate(barricade);
         }
 
         private void Update()
