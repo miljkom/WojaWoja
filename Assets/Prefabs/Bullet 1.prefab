@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1240056195489929718}
   - component: {fileID: 1240056195489929719}
+  - component: {fileID: 4215265536320479103}
   - component: {fileID: -316927792064692735}
   - component: {fileID: 1411330903541033527}
-  - component: {fileID: -4372656129170643931}
   m_Layer: 0
-  m_Name: BorkoBullet
-  m_TagString: EnemyBullet
+  m_Name: Bullet 1
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: f19014b8af3687e40aad0e6521ad2c72, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7f357c78ef72dac4bb7ee6b06b020736, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,6 +87,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4215265536320479103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240056195489929716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e29c18a8f4ec91544aecfce1527a15a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootSpeed: 5
 --- !u!61 &-316927792064692735
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -104,14 +117,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.91, y: 0.74}
+    oldSize: {x: 2.07, y: 0.74}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.91, y: 0.74}
+  m_Size: {x: 2.07, y: 0.74}
   m_EdgeRadius: 0
 --- !u!50 &1411330903541033527
 Rigidbody2D:
@@ -134,16 +147,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-4372656129170643931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1240056195489929716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f911011d716f66419251e85e8151337, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootSpeed: 8

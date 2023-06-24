@@ -1,28 +1,46 @@
+using System;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
-using UnityEngine.Rendering.UI;
+using Random = UnityEngine.Random;
 
 public class ShootBullet : MonoBehaviour
 {
     [SerializeField] private GameObject bullet;
     [SerializeField] private GameObject gigaBullet;
+    [SerializeField] private GameObject molimBullet;
+    [SerializeField] private GameObject koSitiBullet;
     [SerializeField] private AudioSource otkaz;
     [SerializeField] private AudioSource gigaOtkaz;
+    [SerializeField] private AudioSource molim;
+    [SerializeField] private AudioSource kosiTi;
     [SerializeField] private Animator _animator;
     [SerializeField] private Transform spawnPointBullet;
     [SerializeField] private Transform gigaSpawnPointBullet;
+    private List<GameObject> maybeRandom = new List<GameObject>();
+    private List<AudioSource> audioRandom = new List<AudioSource>();
+
+    private void Awake()
+    {
+        maybeRandom.Add(bullet);
+        audioRandom.Add(otkaz);
+        maybeRandom.Add(molimBullet);
+        audioRandom.Add(molim);
+        maybeRandom.Add(koSitiBullet);
+        audioRandom.Add(kosiTi);
+    }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && Player.Instance.fresh)
         {
-            Instantiate(bullet, spawnPointBullet.position, quaternion.identity);
+            int randomIndex = Random.Range(0, maybeRandom.Count);
+            Instantiate(maybeRandom[randomIndex], spawnPointBullet.position, quaternion.identity);
             _animator.Play("Voja_Shoot");
-            if (!otkaz.isPlaying)
+            if (!molim.isPlaying && !otkaz.isPlaying && !kosiTi.isPlaying)
             {
-                otkaz.Play();
+                audioRandom[randomIndex].Play();
             }
             _animator.Play("Voja_IndikatorScale");
             Player.Instance.tiredness += 0.1f;
