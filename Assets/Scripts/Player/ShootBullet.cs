@@ -7,12 +7,13 @@ public class ShootBullet : MonoBehaviour
 {
     [SerializeField] private GameObject bullet;
     [SerializeField] private Animator _animator;
+    [SerializeField] private Transform spawnPointBullet;
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && Player.Instance.fresh)
         {
-            Instantiate(bullet, transform.position + Vector3.right, quaternion.identity);
+            Instantiate(bullet, spawnPointBullet.position, quaternion.identity);
             _animator.Play("Voja_Shoot");
             Player.Instance.tiredness += 0.1f;
         }

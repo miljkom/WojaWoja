@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1240056195489929718}
   - component: {fileID: 1240056195489929719}
-  - component: {fileID: 4215265536320479103}
   - component: {fileID: -316927792064692735}
+  - component: {fileID: 8472270967938269977}
   m_Layer: 0
   m_Name: 3DHorizontalBullet
   m_TagString: EnemyBullet
@@ -86,20 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4215265536320479103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1240056195489929716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e29c18a8f4ec91544aecfce1527a15a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootSpeed: 3
-  isEnemyBullet: 1
 --- !u!61 &-316927792064692735
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -126,3 +112,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8472270967938269977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240056195489929716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f911011d716f66419251e85e8151337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootSpeed: 2

@@ -6,12 +6,17 @@ public class Player : Singleton<Player>
 {
     public float health;
     public float tiredness;
+    public bool fresh = true;
     private SpriteRenderer spriteRenderer;
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("EnemyBullet") || col.CompareTag("Enemy"))
         {
-            Destroy(gameObject);
+            if (health <= 0)
+            {
+                Destroy(gameObject);
+            }
+            health--;
             Destroy(col.gameObject);
             Debug.LogError("Game over");
         }
@@ -26,8 +31,23 @@ public class Player : Singleton<Player>
     {
         if(tiredness > 0)
         {
-            tiredness -= Time.deltaTime * 0.05f;
+            if (fresh)
+            {
+                tiredness -= Time.deltaTime * 0.1f;
+            }
+            else
+            {
+                tiredness -= Time.deltaTime * 0.25f;
+            }
             spriteRenderer.material.SetFloat("_Fill", tiredness);
+        }
+        if (tiredness >= 1)
+        {
+            fresh = false;
+        }
+        else if (tiredness <= 0)
+        {
+            fresh = true;
         }
     }
 }
