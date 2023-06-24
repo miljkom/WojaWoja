@@ -7,6 +7,7 @@ public class EnemySpawnBullet : MonoBehaviour
 {
     [SerializeField] private float spawnBulletsInSeconds;
     [SerializeField] private GameObject enemyBullet;
+    [SerializeField] private Transform spawnPointBorko;
     private bool isBorko;
     public int borkoLimit;
     private void Start()
@@ -33,10 +34,10 @@ public class EnemySpawnBullet : MonoBehaviour
             {
                 case true when borkoLimit > bullets:
                     bullets++;
-                    Instantiate(enemyBullet, GameManager.Instance.borkoPointer.transform.GetChild(0).transform);
+                    Instantiate(enemyBullet, spawnPointBorko.position, Quaternion.identity);
                     break;
                 case false:
-                    Instantiate(enemyBullet, transform.position + Vector3.left, quaternion.identity);
+                    Instantiate(enemyBullet, transform.position + Vector3.left, Quaternion.identity);
                     break;
             }
         }

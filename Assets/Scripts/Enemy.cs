@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
     {
         startingSpeed = speed;
     }
-
+    
     private void Update()
     {
         if (health <= 0 && !_isDead)

@@ -10,6 +10,8 @@ public class Barricade : MonoBehaviour
     [SerializeField] private float health;
 
     private bool inside;
+    private bool isBorko;
+
     private void Update()
     {
         if (health <= 0)
@@ -25,12 +27,13 @@ public class Barricade : MonoBehaviour
         {
             inside = true;
             StartCoroutine(LoseHealth());
-            health -= 1f;
         }
 
         if (col.CompareTag("Borko"))
         {
-            Destroy(col.gameObject);
+            inside = true;
+            isBorko = true;
+            StartCoroutine(LoseHealth());
         }
     }
 
@@ -39,6 +42,12 @@ public class Barricade : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             inside = false;
+        }
+
+        if (other.CompareTag("Borko"))
+        {
+            inside = false;
+            isBorko = false;
         }
     }
 
@@ -54,7 +63,14 @@ public class Barricade : MonoBehaviour
     {
         while (inside)
         {
-            health -= 1f;
+            if (isBorko)
+            {
+                health -= 5f;
+            }
+            else
+            {
+                health -= 1f;
+            }
             Debug.Log(health);
             yield return new WaitForSeconds(1f);
         }

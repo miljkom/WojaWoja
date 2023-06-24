@@ -1193,6 +1193,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4171616723269214388, guid: c2af7af79d8d42549abad765416b5fc8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -19.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 4171616723269214388, guid: c2af7af79d8d42549abad765416b5fc8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.12
+      objectReference: {fileID: 0}
     - target: {fileID: 5158338745764674529, guid: c2af7af79d8d42549abad765416b5fc8, type: 3}
       propertyPath: m_Name
       value: ObjectDestroyer
