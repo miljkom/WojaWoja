@@ -11,13 +11,14 @@ public class ShootBullet : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
-            Instantiate(bullet, transform.position, quaternion.identity);
+            Instantiate(bullet, transform.position + Vector3.right, quaternion.identity);
 
         if (Input.GetKeyDown(KeyCode.F))
         {
-            Instantiate(bullet, transform.position, quaternion.identity);
-            Instantiate(bulletUp, transform.position, quaternion.identity);
-            Instantiate(bulletDown, transform.position, quaternion.identity);
+            var playerPosition = transform.position + Vector3.right;
+            Instantiate(bullet, playerPosition, quaternion.identity);
+            Instantiate(bulletUp, playerPosition, quaternion.identity);
+            Instantiate(bulletDown, playerPosition, quaternion.identity);
         }
     }
 }
