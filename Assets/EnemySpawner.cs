@@ -9,7 +9,7 @@ public class EnemySpawner : MonoBehaviour
     [FormerlySerializedAs("advancedSpawner")] [SerializeField] private List<float> advanced1Spawner;
     [SerializeField] private List<float> advanced2Spawner;
     [SerializeField] private List<float> advanced3Spawner;
-    [SerializeField] private List<float> normalSpawner;
+    [SerializeField] private AudioSource borko;
 
     private void Update()
     {
