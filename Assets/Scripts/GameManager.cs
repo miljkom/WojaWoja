@@ -34,7 +34,7 @@ public class GameManager : Singleton<GameManager>
 
     public void SpawnNormal()
     {
-        Instantiate(enemy, waypoints[Random.Range(0, 8)].transform.position, Quaternion.identity);
+        Instantiate(enemy, waypoints[Random.Range(0, waypointsCount)].transform.position, Quaternion.identity);
     }
 
 

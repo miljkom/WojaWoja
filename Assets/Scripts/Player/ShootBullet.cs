@@ -9,8 +9,10 @@ public class ShootBullet : MonoBehaviour
     [SerializeField] private GameObject bullet;
     [SerializeField] private GameObject gigaBullet;
     [SerializeField] private AudioSource otkaz;
+    [SerializeField] private AudioSource gigaOtkaz;
     [SerializeField] private Animator _animator;
     [SerializeField] private Transform spawnPointBullet;
+    [SerializeField] private Transform gigaSpawnPointBullet;
 
     private void Update()
     {
@@ -27,8 +29,12 @@ public class ShootBullet : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.F) && Player.Instance.charger >= 1f)
         {
-            Instantiate(gigaBullet, spawnPointBullet.position, Quaternion.identity);
+            Instantiate(gigaBullet, gigaSpawnPointBullet.position, Quaternion.identity);
             _animator.Play("Voja_Shoot");
+            if (!gigaOtkaz.isPlaying)
+            {
+                gigaOtkaz.Play();
+            }
             Player.Instance.charger = 0;
         }
     }

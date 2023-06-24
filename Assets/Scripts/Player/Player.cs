@@ -9,6 +9,7 @@ public class Player : Singleton<Player>
     public bool fresh = true;
     public float charger;
     private SpriteRenderer spriteRenderer;
+    [SerializeField] private AudioSource stani;
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("EnemyBullet") || col.CompareTag("Enemy"))
@@ -45,6 +46,8 @@ public class Player : Singleton<Player>
         }
         if (tiredness >= 1)
         {
+            if (!stani.isPlaying)
+                stani.Play();
             fresh = false;
         }
         else if (tiredness <= 0)
