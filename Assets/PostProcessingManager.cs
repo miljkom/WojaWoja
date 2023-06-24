@@ -1,0 +1,64 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
+
+public class PostProcessingManager : PersistentSingleton<PostProcessingManager>
+{
+    [SerializeField] private Volume _postProcessingVolume;
+    private Vignette _vignette;
+    private ChromaticAberration _chromaticAberration;
+
+    private void Start() 
+    {
+        _postProcessingVolume.profile.TryGet(out _vignette);
+        _postProcessingVolume.profile.TryGet(out _chromaticAberration);
+    }
+    public IEnumerator VignetteController(float intensity, float duration)
+    {
+        float elapsedTime = 0f;
+        while (elapsedTime < duration)
+        {
+            float currentValue = Mathf.Lerp(_vignette.intensity.value, intensity, elapsedTime / duration);
+            _vignette.intensity.value = currentValue;
+            elapsedTime += Time.deltaTime;
+            yield return null;  
+        }
+        elapsedTime = 0f;
+        while (elapsedTime < duration)
+        {
+            float currentValue = Mathf.Lerp(_vignette.intensity.value, 0, elapsedTime / duration);
+            _vignette.intensity.value = currentValue;
+            elapsedTime += Time.deltaTime;
+            yield return null;  
+        }
+    }
+    public IEnumerator ChromaticController(float intensity, float duration)
+    {
+        float elapsedTime = 0f;
+        while (elapsedTime < duration)
+        {
+            float currentValue = Mathf.Lerp(_chromaticAberration.intensity.value, intensity, elapsedTime / duration);
+            _chromaticAberration.intensity.value = currentValue;
+            elapsedTime += Time.deltaTime;
+            yield return null;  
+        }
+        elapsedTime = 0f;
+        while (elapsedTime < duration)
+        {
+            float currentValue = Mathf.Lerp(_chromaticAberration.intensity.value, 0, elapsedTime / duration);
+            _chromaticAberration.intensity.value = currentValue;
+            elapsedTime += Time.deltaTime;
+            yield return null;  
+        }
+    }
+    private void Update() {
+        if(Input.GetKeyDown(KeyCode.K))
+        {
+            StartCoroutine(VignetteController(.5f,.075f));
+            StartCoroutine(ChromaticController(.25f,.075f));
+
+        }
+    }
+}
