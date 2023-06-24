@@ -11,19 +11,16 @@ public class EnemyBulletMovement : MonoBehaviour
     [SerializeField] private float shootSpeed;
     
     private Vector3 targetTransform;
+    private Vector2 direction;
 
-    private void Awake()
+    private void Start()
     {
-        targetTransform = GameManager.Instance.voja.transform.position;
+        direction = (GameManager.Instance.voja.transform.position - transform.position).normalized;
     }
 
     private void Update()
-    { 
-        transform.Translate(Vector3.left * Time.deltaTime * shootSpeed);
-        /*if (transform.position == targetTransform)
-        {
-            transform.position = Vector3.MoveTowards( transform.position, targetTransform, shootSpeed * Time.deltaTime);
-        }*/
+    {
+        transform.Translate(direction * shootSpeed * Time.deltaTime);
     }
     
 }
