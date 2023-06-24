@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class ShootBullet : MonoBehaviour
 {
     [SerializeField] private GameObject bullet;
     [SerializeField] private GameObject gigaBullet;
+    [SerializeField] private AudioSource otkaz;
     [SerializeField] private Animator _animator;
     [SerializeField] private Transform spawnPointBullet;
 
@@ -16,6 +18,10 @@ public class ShootBullet : MonoBehaviour
         {
             Instantiate(bullet, spawnPointBullet.position, quaternion.identity);
             _animator.Play("Voja_Shoot");
+            if (!otkaz.isPlaying)
+            {
+                otkaz.Play();
+            }
             _animator.Play("Voja_IndikatorScale");
             Player.Instance.tiredness += 0.1f;
         }

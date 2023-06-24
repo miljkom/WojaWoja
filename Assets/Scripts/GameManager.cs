@@ -21,6 +21,7 @@ public class GameManager : Singleton<GameManager>
 
     private void Start()
     {
+        Application.targetFrameRate = GameConstants.Instance.GameFps;
         waypointsCount = waypoints.Count;
         Instantiate(barricade);
     }
