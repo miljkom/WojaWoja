@@ -595,7 +595,9 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: 7c74b584e7f1c4c4ba6ceb5e750ac548, type: 3}
+      name: _Emission
     nameFileIdTable:
       VojaVoja_Atlas1 (1)_0: -514435645
       VojaVoja_Atlas1 (1)_1: 1034942284
