@@ -7,9 +7,11 @@ using UnityEngine.Serialization;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [FormerlySerializedAs("advancedSpawner")] [SerializeField] private List<float> advanced1Spawner;
     [SerializeField] private List<float> advanced2Spawner;
+    [FormerlySerializedAs("advancedSpawner")] [SerializeField] private List<float> advanced1Spawner;
+    [FormerlySerializedAs("advanced2Spawner")] [SerializeField] private List<float> basicEnemies;
     [SerializeField] private List<float> advanced3Spawner;
+    [SerializeField] private List<float> advanced4Spawner;
     [SerializeField] private List<float> friendly1Spawner;
     [SerializeField] private AudioSource borko;
 
@@ -26,11 +28,11 @@ public class EnemySpawner : MonoBehaviour
         }
 
         //ovo je normal, jbg nmg da menjam sada
-        if (advanced2Spawner.Count > 0)
+        if (basicEnemies.Count > 0)
         {
-            if (time > advanced2Spawner[0])
+            if (time > basicEnemies[0])
             {
-                advanced2Spawner.RemoveAt(0);
+                basicEnemies.RemoveAt(0);
                 GameManager.Instance.SpawnNormal();
             }
         }
