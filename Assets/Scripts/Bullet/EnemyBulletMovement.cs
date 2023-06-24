@@ -18,12 +18,12 @@ public class EnemyBulletMovement : MonoBehaviour
     }
 
     private void Update()
-    {
-        transform.position = Vector3.MoveTowards( transform.position, targetTransform, shootSpeed * Time.deltaTime);
-        if (transform.position == targetTransform)
+    { 
+        transform.Translate(Vector3.left * Time.deltaTime * shootSpeed);
+        /*if (transform.position == targetTransform)
         {
-            transform.Translate(Vector3.left * Time.deltaTime * shootSpeed);
-        }
+            transform.position = Vector3.MoveTowards( transform.position, targetTransform, shootSpeed * Time.deltaTime);
+        }*/
     }
     
 }

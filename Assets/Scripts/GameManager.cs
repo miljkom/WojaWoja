@@ -11,6 +11,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private GameObject advanced1;
     [SerializeField] private GameObject advanced2;
     [SerializeField] private GameObject advanced3;
+    [SerializeField] private GameObject borko;
     [SerializeField] public GameObject voja;
     [SerializeField] private Image chargerImage;
     public GameObject barricade;
@@ -33,7 +34,6 @@ public class GameManager : Singleton<GameManager>
     public void SpawnNormal()
     {
         Instantiate(enemy, waypoints[Random.Range(0, 8)].transform.position, Quaternion.identity);
-
     }
 
 

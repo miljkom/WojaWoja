@@ -55,8 +55,8 @@ MonoBehaviour:
   advanced1: {fileID: 3358574256798413147, guid: 1b1f5d6b265f8384b915ff1e1b2da5fa, type: 3}
   advanced2: {fileID: 3358574256798413147, guid: 90b7d0def0b946f42bbdcab1aabc9478, type: 3}
   advanced3: {fileID: 0}
+  borko: {fileID: 3358574256798413147, guid: fa993b365228c594ebce6edbfa01a277, type: 3}
   voja: {fileID: 1784964433545604526, guid: 7c3b70f4a1d719f45b2ee4e250462f65, type: 3}
   chargerImage: {fileID: 0}
   barricade: {fileID: 930273646611112914, guid: c9215cf4a53b00149bed3fbd0fcdb75a, type: 3}
   tiredness: {fileID: 0}
-  spawn: 0

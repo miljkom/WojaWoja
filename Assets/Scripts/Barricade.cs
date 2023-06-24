@@ -26,6 +26,11 @@ public class Barricade : MonoBehaviour
             StartCoroutine(LoseHealth());
             health -= 1f;
         }
+
+        if (col.CompareTag("Borko"))
+        {
+            Destroy(col.gameObject);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)

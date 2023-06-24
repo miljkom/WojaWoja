@@ -27,6 +27,7 @@ public class EnemySpawner : MonoBehaviour
             GameManager.Instance.SpawnNormal();
         }
         
+        
         // if (time > advanced2Spawner[0])
         // {
         //     advanced2Spawner.RemoveAt(0);
