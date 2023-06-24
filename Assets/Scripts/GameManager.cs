@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using Unity.Mathematics;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Serialization;
@@ -19,41 +15,20 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private Image chargerImage;
     public GameObject barricade;
     public GameObject tiredness;
-    
-    public bool spawn;
 
     private int waypointsCount;
 
     private void Start()
     {
-        spawn = true;
         waypointsCount = waypoints.Count;
         Instantiate(barricade);
     }
 
     private void Update()
     {
-        if (spawn)
-        {
-            StartCoroutine(SpawnEnemies());
-        }
-
         chargerImage.fillAmount = Player.Instance.charger;
     }
-
-    private IEnumerator SpawnEnemies()
-    {
-        spawn = false;
-        var enemyType = Random.Range(0, 10);
-        if (enemyType < 5)
-            Instantiate(enemy, waypoints[Random.Range(0, waypointsCount)].transform.position, Quaternion.identity);
-        else if (enemyType < 8)
-            Instantiate(advanced1, waypoints[Random.Range(0, waypointsCount)].transform.position, Quaternion.identity);
-        else
-            Instantiate(advanced2, waypoints[Random.Range(0, waypointsCount)].transform.position, Quaternion.identity);
-        yield return new WaitForSeconds(2f);
-        spawn = true;
-    }
+    
 
     public void SpawnNormal()
     {
