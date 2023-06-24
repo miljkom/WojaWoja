@@ -18,6 +18,7 @@ public class GameManager : Singleton<GameManager>
     public GameObject tiredness;
 
     private int waypointsCount;
+    public bool DestroyBarricade { get; set; }
 
     private void Start()
     {

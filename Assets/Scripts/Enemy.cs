@@ -9,6 +9,13 @@ public class Enemy : MonoBehaviour
     public float speed;
     public float health;
 
+    private float startingSpeed;
+    
+    private void Awake()
+    {
+        startingSpeed = speed;
+    }
+
     private void Update()
     {
         if (health <= 0)
@@ -18,9 +25,9 @@ public class Enemy : MonoBehaviour
         }
         //transform.position = Vector3.MoveTowards(transform.position, GameManager.Instance.voja.transform.position, speed * Time.deltaTime); 
         transform.Translate(Vector3.left * speed * Time.deltaTime);
-        if (GameManager.Instance.barricade.IsDestroyed())
+        if (GameManager.Instance.DestroyBarricade)
         {
-            speed = 2f;
+            speed = startingSpeed;
         }
     }
 

@@ -14,6 +14,7 @@ public class Barricade : MonoBehaviour
     {
         if (health <= 0)
         {
+            GameManager.Instance.DestroyBarricade = true;
             Destroy(gameObject);
         }
     }
