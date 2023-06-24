@@ -37,6 +37,6 @@ public class DiagonalBulletMovement : MonoBehaviour
                 return;
             }
         }
-        transform.Translate(new Vector2(1,1 * direction).normalized  * Time.deltaTime * speed);
+        transform.Translate(new Vector2(-1,1 * direction).normalized  * Time.deltaTime * speed);
     }
 }

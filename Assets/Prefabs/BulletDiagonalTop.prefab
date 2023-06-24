@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -5135782655548446573}
   m_Layer: 0
   m_Name: BulletDiagonalTop
-  m_TagString: Bullet
+  m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8004745, g: 0.37169808, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3f952c524b2bc24e8b80f636a45a34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 3
   direction: 1
   topBound: {fileID: 401812929646705159, guid: ab917c9b9c493964cb020156ecbe1629, type: 3}
   bottomBound: {fileID: 3900186097610679563, guid: 2f3df015ee5f468419ef85edbe2781c0, type: 3}

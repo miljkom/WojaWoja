@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
         {
             Destroy(gameObject);
             Destroy(col.gameObject);
+            Debug.LogError("Game over");
         }
     }
 }

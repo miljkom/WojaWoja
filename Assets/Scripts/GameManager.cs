@@ -11,6 +11,7 @@ public class GameManager: Singleton<GameManager>
         [SerializeField] private List<GameObject> waypoints;
         [SerializeField] private GameObject enemy;
         [SerializeField] private GameObject shootingEnemy;
+        [SerializeField] private GameObject shooting3DEnemy;
         [SerializeField] public GameObject voja;
 
         public bool spawn;
@@ -32,10 +33,12 @@ public class GameManager: Singleton<GameManager>
         {
             spawn = false;
             var enemyType = Random.Range(0, 10);
-            if(enemyType < 9)
+            if(enemyType < 5)
                 Instantiate(enemy, waypoints[Random.Range(0,8)].transform.position, Quaternion.identity);
-            if(enemyType < 10)
+            else if(enemyType < 8)
                 Instantiate(shootingEnemy, waypoints[Random.Range(0,8)].transform.position, Quaternion.identity);
+            else 
+                Instantiate(shooting3DEnemy, waypoints[Random.Range(0,8)].transform.position, Quaternion.identity);
             yield return new WaitForSeconds(2f);
             spawn = true;
         }

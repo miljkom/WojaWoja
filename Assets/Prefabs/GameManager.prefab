@@ -55,5 +55,6 @@ MonoBehaviour:
   - {fileID: 4534473720343557698, guid: c38f69b97ba3dc740a9f379c16046a09, type: 3}
   enemy: {fileID: 3358574256798413147, guid: e6b4b5a259c42064ebb358f03e74d0e3, type: 3}
   shootingEnemy: {fileID: 3358574256798413147, guid: 1b1f5d6b265f8384b915ff1e1b2da5fa, type: 3}
+  shooting3DEnemy: {fileID: 3358574256798413147, guid: 90b7d0def0b946f42bbdcab1aabc9478, type: 3}
   voja: {fileID: 1784964433545604526, guid: 7c3b70f4a1d719f45b2ee4e250462f65, type: 3}
   spawn: 0

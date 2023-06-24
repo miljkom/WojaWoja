@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 7755000379189681783}
   - component: {fileID: 4960610479067675291}
   - component: {fileID: 3833124803893779688}
-  - component: {fileID: 8447381347870029876}
   - component: {fileID: 404408302785468429}
   - component: {fileID: 4216960826513777060}
+  - component: {fileID: 2042707347823329061}
   m_Layer: 0
-  m_Name: ShootingEnemy
+  m_Name: 3DShootingEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.990566, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.99215686, g: 0, b: 0.87557435, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -114,20 +114,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &8447381347870029876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3358574256798413147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 824ecdc9ce94bc840b7aed17e7c0786f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnBulletsInSeconds: 3
-  enemyBullet: {fileID: 1240056195489929716, guid: 2dfa6d23c622de843974cbb330b5d84b, type: 3}
 --- !u!50 &404408302785468429
 Rigidbody2D:
   serializedVersion: 4
@@ -162,4 +148,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  health: 75
+  health: 50
+--- !u!114 &2042707347823329061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3358574256798413147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56234d97cd0556640a5a3df48e913d9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 1240056195489929716, guid: 542cd861d311225449a8384c7c73bfad, type: 3}
+  bulletUp: {fileID: 1240056195489929716, guid: 7946909d6ec4c8e4098ab175b272258e, type: 3}
+  bulletDown: {fileID: 1240056195489929716, guid: b5ac6aec3a76012488b198f5a6b11951, type: 3}
+  spawnBulletsInSeconds: 4

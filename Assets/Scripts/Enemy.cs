@@ -8,12 +8,6 @@ public class Enemy : MonoBehaviour
     public float speed;
     public float health;
 
-    private void Awake()
-    {
-        health = 100f;
-        speed = 2f;
-    }
-
     private void Update()
     {
         if (health == 0)

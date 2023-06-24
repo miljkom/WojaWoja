@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e29c18a8f4ec91544aecfce1527a15a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootSpeed: 10
+  shootSpeed: 3
   isEnemyBullet: 1
 --- !u!61 &-1187074874437223488
 BoxCollider2D:
