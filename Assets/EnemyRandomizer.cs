@@ -32,6 +32,6 @@ public class EnemyRandomizer : MonoBehaviour
 
     public void KillEnemy()
     {
-        Destroy(transform.parent.gameObject);
+        Destroy(transform.parent.parent.gameObject);
     }
 }
