@@ -27,7 +27,6 @@ public class EnemySpawner : MonoBehaviour
             }
         }
 
-        //ovo je normal, jbg nmg da menjam sada
         if (basicEnemies.Count > 0)
         {
             if (time > basicEnemies[0])
@@ -47,18 +46,32 @@ public class EnemySpawner : MonoBehaviour
                 GameManager.Instance.SpawnFriendly1();
             }
         }
+
+        if (advanced2Spawner.Count > 0)
+        {
+            if (time > advanced2Spawner[0])
+            {
+                advanced2Spawner.RemoveAt(0);
+                GameManager.Instance.SpawnAdvanced2();
+            }
+        }
+
+        if (advanced3Spawner.Count > 0)
+        {
+            if (time > advanced3Spawner[0])
+            {
+                advanced3Spawner.RemoveAt(0);
+                GameManager.Instance.SpawnAdvanced3();
+            }
+        }
         
-        
-        // if (time > advanced2Spawner[0])
-        // {
-        //     advanced2Spawner.RemoveAt(0);
-        //     GameManager.Instance.SpawnAdvanced2();
-        // }
-        //
-        // if (time > advanced3Spawner[0])
-        // {
-        //     advanced3Spawner.RemoveAt(0);
-        //     GameManager.Instance.SpawnAdvanced3();
-        // }
+        if (advanced4Spawner.Count > 0)
+        {
+            if (time > advanced4Spawner[0])
+            {
+                advanced3Spawner.RemoveAt(0);
+                GameManager.Instance.SpawnAdvanced4();
+            }
+        }
     }
 }

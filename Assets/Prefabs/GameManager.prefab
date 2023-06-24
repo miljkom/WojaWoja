@@ -54,7 +54,8 @@ MonoBehaviour:
   enemy: {fileID: 3358574256798413147, guid: e6b4b5a259c42064ebb358f03e74d0e3, type: 3}
   advanced1: {fileID: 3358574256798413147, guid: 1b1f5d6b265f8384b915ff1e1b2da5fa, type: 3}
   advanced2: {fileID: 3358574256798413147, guid: 90b7d0def0b946f42bbdcab1aabc9478, type: 3}
-  advanced3: {fileID: 0}
+  advanced3: {fileID: 3358574256798413147, guid: d430ea47a2e033c40b84209df171e88d, type: 3}
+  advanced4: {fileID: 3358574256798413147, guid: 01be53a2ae8cb2d4daa1c4ab8ef7d48e, type: 3}
   friendly1: {fileID: 3358574256798413147, guid: fa993b365228c594ebce6edbfa01a277, type: 3}
   friendly2: {fileID: 0}
   voja: {fileID: 1784964433545604526, guid: 7c3b70f4a1d719f45b2ee4e250462f65, type: 3}

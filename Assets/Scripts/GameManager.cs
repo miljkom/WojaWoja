@@ -11,6 +11,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private GameObject advanced1;
     [SerializeField] private GameObject advanced2;
     [SerializeField] private GameObject advanced3;
+    [SerializeField] private GameObject advanced4;
     [SerializeField] private GameObject friendly1;
     [SerializeField] private GameObject friendly2;
     [SerializeField] public GameObject voja;
@@ -60,5 +61,10 @@ public class GameManager : Singleton<GameManager>
     public void SpawnAdvanced3()
     {
         Instantiate(advanced3, waypoints[Random.Range(0, waypointsCount)].transform.position, Quaternion.identity);
+    }
+    
+    public void SpawnAdvanced4()
+    {
+        Instantiate(advanced4, waypoints[Random.Range(0, waypointsCount)].transform.position, Quaternion.identity);
     }
 }
