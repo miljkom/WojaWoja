@@ -7,6 +7,7 @@ public class Player : Singleton<Player>
     public float health;
     public float tiredness;
     public bool fresh = true;
+    public float charger;
     private SpriteRenderer spriteRenderer;
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -25,6 +26,7 @@ public class Player : Singleton<Player>
     private void Start()
     {
         spriteRenderer = GameManager.Instance.tiredness.GetComponent<SpriteRenderer>();
+        charger = 0;
     }
 
     private void Update()

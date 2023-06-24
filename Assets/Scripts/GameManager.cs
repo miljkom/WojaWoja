@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class GameManager: Singleton<GameManager>
@@ -12,6 +14,7 @@ public class GameManager: Singleton<GameManager>
         [SerializeField] private GameObject enemy;
         [SerializeField] private GameObject shootingEnemy;
         [SerializeField] private GameObject shooting3DEnemy;
+        [SerializeField] private Image chargerImage;
         public GameObject voja;
         public GameObject barricade;
         public GameObject tiredness;
@@ -30,6 +33,8 @@ public class GameManager: Singleton<GameManager>
             {
                 StartCoroutine(SpawnEnemies());
             }
+
+            chargerImage.fillAmount = Player.Instance.charger;
         }
         
         private IEnumerator SpawnEnemies()
