@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     {
         if (health <= 0)
         {
+            Player.Instance.charger += 0.1f;
             Destroy(gameObject);
         }
         //transform.position = Vector3.MoveTowards(transform.position, GameManager.Instance.voja.transform.position, speed * Time.deltaTime); 
