@@ -21,17 +21,17 @@ public class Player : Singleton<Player>
     private Animator _animator;
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("EnemyBullet") || col.CompareTag("Enemy"))
+        if (col.CompareTag("EnemyBullet"))
         {
-
-            health--;
-            fullHearts[fullHearts.Count-1].SetActive(false);
-            fullHearts.RemoveAt(fullHearts.Count-1);
             Destroy(col.gameObject);
+            health--;
             if (health <= 0)
             {
+                GameManager.Instance.GameOver();
                 Destroy(gameObject);
             }
+            fullHearts[fullHearts.Count-1].SetActive(false);
+            fullHearts.RemoveAt(fullHearts.Count-1);
             Debug.LogError("Game over");
         }
     }

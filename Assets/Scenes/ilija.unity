@@ -1117,6 +1117,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Voja
       objectReference: {fileID: 0}
+    - target: {fileID: 6614932491518112739, guid: 7c3b70f4a1d719f45b2ee4e250462f65, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c3b70f4a1d719f45b2ee4e250462f65, type: 3}
 --- !u!1 &854893487 stripped
