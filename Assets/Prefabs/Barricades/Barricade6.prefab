@@ -48,6 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  borkoDamage: 3
+  enemyDamage: 1
 --- !u!212 &4372266577692011782
 SpriteRenderer:
   m_ObjectHideFlags: 0

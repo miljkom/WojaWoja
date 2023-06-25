@@ -2261,6 +2261,7 @@ MonoBehaviour:
   _animator: {fileID: 1915632657}
   spawnPointBullet: {fileID: 4195092940685671154}
   gigaSpawnPointBullet: {fileID: 4128346028518474981}
+  fillCooldowner: 0.1
 --- !u!50 &2533252298453217192
 Rigidbody2D:
   serializedVersion: 4
@@ -2325,6 +2326,8 @@ MonoBehaviour:
   fresh: 1
   charger: 0
   stani: {fileID: 1638792318951926671}
+  freshenUp: 0.1
+  relaxCooler: 0.25
 --- !u!82 &8488130451254506471
 AudioSource:
   m_ObjectHideFlags: 0
