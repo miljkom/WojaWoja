@@ -56,6 +56,7 @@ public class Enemy : MonoBehaviour
         }
         if (col.CompareTag("Blocker"))
         {
+            _canPass = false;
             speed = 0;
             GetComponentInChildren<Animator>().SetBool("IsWalking", false);
         }
