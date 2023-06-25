@@ -10,6 +10,7 @@ public class EnemySpawnBullet : MonoBehaviour
     [SerializeField] private Transform spawnPointBorko;
     private bool isBorko;
     public int borkoLimit;
+    public bool isDisabled;
     private void Start()
     {
         if (gameObject.CompareTag("Borko"))
@@ -27,9 +28,10 @@ public class EnemySpawnBullet : MonoBehaviour
     private IEnumerator SpawnEnemyBullets()
     {
         int bullets = 0;
-        while (true)
+        while (!isDisabled)
         {
             yield return new WaitForSeconds(spawnBulletsInSeconds);
+            if(isDisabled) yield break;
             switch (isBorko)
             {
                 case true when borkoLimit > bullets:

@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
     private float startingSpeed;
     private bool _isDead = false;
     public bool _canPass = false;
+
+    private bool shooterDisabled;
     
     private void Awake()
     {
@@ -33,6 +35,13 @@ public class Enemy : MonoBehaviour
         }
         //transform.position = Vector3.MoveTowards(transform.position, GameManager.Instance.voja.transform.position, speed * Time.deltaTime); 
         transform.Translate(Vector3.left * speed * Time.deltaTime);
+        if (transform.position.x < -2 && !shooterDisabled)
+        {
+            if (GetComponent<EnemySpawnBullet>() != null)
+                GetComponent<EnemySpawnBullet>().isDisabled = true;
+            shooterDisabled = true;
+        }
+            
         if (GameManager.Instance.realBarricade.Any(x => x.IsDestroyed()) && !_isDead)
         {
             if (_canPass)
