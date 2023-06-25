@@ -8,11 +8,13 @@ using UnityEngine;
 public class Barricade : MonoBehaviour
 {
     [SerializeField] private float health;
-    [SerializeField] private float borkoDamage = 3f;
+    [SerializeField] private float borkoDamage = 2f;
     [SerializeField] private float enemyDamage = 1f;
+    [SerializeField] private float urosDamage = 3f;
 
     private bool inside;
     private bool isBorko;
+    private bool isUros;
 
     private void Update()
     {
@@ -44,6 +46,13 @@ public class Barricade : MonoBehaviour
             FindObjectOfType<Player>().AddLife();
             Destroy(col.gameObject);
         }
+        
+        if (col.CompareTag("Uros"))
+        {
+            inside = true;
+            isUros = true;
+            StartCoroutine(LoseHealth());
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -57,6 +66,12 @@ public class Barricade : MonoBehaviour
         {
             inside = false;
             isBorko = false;
+        }
+        
+        if (other.CompareTag("Uros"))
+        {
+            inside = false;
+            isUros = false;
         }
     }
 
@@ -75,6 +90,11 @@ public class Barricade : MonoBehaviour
             if (isBorko)
             {
                 health -= borkoDamage;
+            }
+
+            if (isUros)
+            {
+                health -= urosDamage;
             }
             else
             {

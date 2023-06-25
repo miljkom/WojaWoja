@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 1546551036964885875}
   m_Layer: 0
   m_Name: Uros
-  m_TagString: Enemy
+  m_TagString: Uros
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
