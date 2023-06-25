@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
@@ -14,6 +15,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private GameObject friendly4;
     [SerializeField] private GameObject friendly5;
     [SerializeField] private GameObject friendly6;
+    [SerializeField] private GameObject lana;
     [SerializeField] public GameObject voja;
     [SerializeField] private Image chargerImage;
     public float chargerDamage;
@@ -41,7 +43,7 @@ public class GameManager : Singleton<GameManager>
 
     public void GameOver()
     {
-        //gameover
+        SceneManager.LoadScene("EndScreen");
     }
     
 
@@ -73,5 +75,10 @@ public class GameManager : Singleton<GameManager>
     public void SpawnFriendly6()
     {
         Instantiate(friendly6, waypoints[Random.Range(0, waypointsCount)].transform.position, Quaternion.identity);
+    }
+
+    public void SpawnLana()
+    {
+        Instantiate(lana, waypoints[waypoints.Count / 2].transform.position, Quaternion.identity);
     }
 }

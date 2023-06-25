@@ -17,6 +17,7 @@ public class Lana : MonoBehaviour
 
             if (health <= 0)
             {
+                Destroy(gameObject);
                 //game over splash screen
             }
         }

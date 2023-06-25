@@ -15,6 +15,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private List<float> friendly4Spawner;
     [SerializeField] private List<float> friendly5Spawner;
     [SerializeField] private List<float> friendly6Spawner;
+    [SerializeField] private List<float> lanaSpawner;
     [SerializeField] private AudioSource borko;
     [SerializeField] private TextMeshProUGUI enemiesSpawned;
 
@@ -85,6 +86,15 @@ public class EnemySpawner : MonoBehaviour
             {
                 friendly6Spawner.RemoveAt(0);
                 GameManager.Instance.SpawnFriendly6();
+            }
+        }
+        
+        if (lanaSpawner.Count > 0)
+        {
+            if (time > lanaSpawner[0])
+            {
+                lanaSpawner.RemoveAt(0);
+                GameManager.Instance.SpawnLana();
             }
         }
     }
