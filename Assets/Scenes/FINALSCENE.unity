@@ -1117,6 +1117,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Voja
       objectReference: {fileID: 0}
+    - target: {fileID: 8352671722336581278, guid: 7c3b70f4a1d719f45b2ee4e250462f65, type: 3}
+      propertyPath: health
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352671722336581278, guid: 7c3b70f4a1d719f45b2ee4e250462f65, type: 3}
+      propertyPath: fullHearts.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352671722336581278, guid: 7c3b70f4a1d719f45b2ee4e250462f65, type: 3}
+      propertyPath: fullHearts.Array.data[0]
+      value: 
+      objectReference: {fileID: 1393210792}
+    - target: {fileID: 8352671722336581278, guid: 7c3b70f4a1d719f45b2ee4e250462f65, type: 3}
+      propertyPath: fullHearts.Array.data[1]
+      value: 
+      objectReference: {fileID: 924018670}
+    - target: {fileID: 8352671722336581278, guid: 7c3b70f4a1d719f45b2ee4e250462f65, type: 3}
+      propertyPath: fullHearts.Array.data[2]
+      value: 
+      objectReference: {fileID: 966762593}
+    - target: {fileID: 8352671722336581278, guid: 7c3b70f4a1d719f45b2ee4e250462f65, type: 3}
+      propertyPath: fullHearts.Array.data[3]
+      value: 
+      objectReference: {fileID: 1167060002}
+    - target: {fileID: 8352671722336581278, guid: 7c3b70f4a1d719f45b2ee4e250462f65, type: 3}
+      propertyPath: fullHearts.Array.data[4]
+      value: 
+      objectReference: {fileID: 1616309735}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c3b70f4a1d719f45b2ee4e250462f65, type: 3}
 --- !u!1 &854893487 stripped
@@ -1343,6 +1371,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!1 &924018670 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2628827545657179720, guid: 0de0fe9aabf87c449b9658c35d7dac5d, type: 3}
+  m_PrefabInstance: {fileID: 1028081314}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &934733047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1466,6 +1499,11 @@ PrefabInstance:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7127408586609559711, guid: 86d4f5a19070f0a4986c9bebccc3aec8, type: 3}
   m_PrefabInstance: {fileID: 950954472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &966762593 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2628827547303367885, guid: 0de0fe9aabf87c449b9658c35d7dac5d, type: 3}
+  m_PrefabInstance: {fileID: 1028081314}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1028081314
 PrefabInstance:
@@ -1632,6 +1670,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c2a71f5516026c41b7b2fc99f19c831, type: 3}
+--- !u!1 &1167060002 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8448054842130099574, guid: 0de0fe9aabf87c449b9658c35d7dac5d, type: 3}
+  m_PrefabInstance: {fileID: 1028081314}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1286419992 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5549009017535909480, guid: 7c3b70f4a1d719f45b2ee4e250462f65, type: 3}
@@ -1641,6 +1684,11 @@ GameObject:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1071140791135432916, guid: 7c3b70f4a1d719f45b2ee4e250462f65, type: 3}
   m_PrefabInstance: {fileID: 854893486}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1393210792 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2628827546606591104, guid: 0de0fe9aabf87c449b9658c35d7dac5d, type: 3}
+  m_PrefabInstance: {fileID: 1028081314}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1543276582
 PrefabInstance:
@@ -1703,6 +1751,11 @@ PrefabInstance:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7127408586609559711, guid: 86d4f5a19070f0a4986c9bebccc3aec8, type: 3}
   m_PrefabInstance: {fileID: 1543276582}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1616309735 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8013769729346616110, guid: 0de0fe9aabf87c449b9658c35d7dac5d, type: 3}
+  m_PrefabInstance: {fileID: 1028081314}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1693229341
 GameObject:
