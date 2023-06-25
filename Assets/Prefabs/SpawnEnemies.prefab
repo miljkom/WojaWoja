@@ -48,6 +48,7 @@ MonoBehaviour:
   basicEnemies:
   - 0
   - 5
+  - 7
   - 10
   - 14
   - 18
@@ -88,6 +89,7 @@ MonoBehaviour:
   - 84
   - 85
   - 86
+  - 87
   - 88
   - 89
   - 90
@@ -96,15 +98,19 @@ MonoBehaviour:
   - 94
   - 95
   - 97
+  - 97.6
   - 98
   - 99
   - 101
   - 102
+  - 103.4
   - 104
   - 105
+  - 106.7
   - 107
   - 108
   - 109
+  - 110.5
   - 111
   - 116
   - 117
@@ -113,18 +119,12 @@ MonoBehaviour:
   - 121
   - 123
   - 124
-  - 124
-  - 103.4
-  - 106.7
-  - 110.5
-  - 97.6
-  - 87
-  - 7
+  - 125
   friendly1Spawner:
   - 51
+  - 77.3
   - 96
   - 112
-  - 77.3
   friendly2Spawner:
   - 33
   - 87
@@ -137,9 +137,9 @@ MonoBehaviour:
   - 114.3
   friendly4Spawner:
   - 24
+  - 82.4
   - 83
   - 107
-  - 82.4
   friendly5Spawner:
   - 43
   - 91
@@ -147,8 +147,8 @@ MonoBehaviour:
   - 120
   friendly6Spawner:
   - 68
-  - 102
   - 77.5
+  - 102
   - 125
   lanaSpawner:
   - 62
