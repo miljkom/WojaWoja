@@ -8,11 +8,7 @@ using UnityEngine.Serialization;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] private List<float> advanced2Spawner;
-    [FormerlySerializedAs("advancedSpawner")] [SerializeField] private List<float> advanced1Spawner;
     [FormerlySerializedAs("advanced2Spawner")] [SerializeField] private List<float> basicEnemies;
-    [SerializeField] private List<float> advanced3Spawner;
-    [SerializeField] private List<float> advanced4Spawner;
     [SerializeField] private List<float> friendly1Spawner;
     [SerializeField] private List<float> friendly2Spawner;
     [SerializeField] private List<float> friendly3Spawner;
@@ -27,15 +23,6 @@ public class EnemySpawner : MonoBehaviour
     private void Update()
     {
         var time = Time.timeSinceLevelLoad;
-        if (advanced1Spawner.Count > 0)
-        {
-            if (time > advanced1Spawner[0])
-            {
-                advanced1Spawner.RemoveAt(0);
-                GameManager.Instance.SpawnAdvanced1();
-                UpdateEnemiesUI();
-            }
-        }
 
         if (basicEnemies.Count > 0)
         {
@@ -98,36 +85,6 @@ public class EnemySpawner : MonoBehaviour
             {
                 friendly6Spawner.RemoveAt(0);
                 GameManager.Instance.SpawnFriendly6();
-            }
-        }
-
-        if (advanced2Spawner.Count > 0)
-        {
-            if (time > advanced2Spawner[0])
-            {
-                advanced2Spawner.RemoveAt(0);
-                GameManager.Instance.SpawnAdvanced2();
-                UpdateEnemiesUI();
-            }
-        }
-
-        if (advanced3Spawner.Count > 0)
-        {
-            if (time > advanced3Spawner[0])
-            {
-                advanced3Spawner.RemoveAt(0);
-                GameManager.Instance.SpawnAdvanced3();
-                UpdateEnemiesUI();
-            }
-        }
-        
-        if (advanced4Spawner.Count > 0)
-        {
-            if (time > advanced4Spawner[0])
-            {
-                advanced3Spawner.RemoveAt(0);
-                GameManager.Instance.SpawnAdvanced4();
-                UpdateEnemiesUI();
             }
         }
     }

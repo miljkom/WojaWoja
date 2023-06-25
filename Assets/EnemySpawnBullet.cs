@@ -37,7 +37,7 @@ public class EnemySpawnBullet : MonoBehaviour
                     Instantiate(enemyBullet, spawnPointBorko.position, Quaternion.identity);
                     break;
                 case false:
-                    Instantiate(enemyBullet, spawnPointBorko.transform.position + Vector3.left, Quaternion.identity);
+                    Instantiate(enemyBullet, spawnPointBorko.position + Vector3.left, Quaternion.identity);
                     break;
             }
         }
