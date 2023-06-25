@@ -52,7 +52,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 8326851f15969094c873b800055bdfcd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -457,7 +457,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86d2fe9159c3d5f46b4ce5cf44f512fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprites: []
+  sprites:
+  - {fileID: 4828301991673902719}
+  - {fileID: 4828301991066052335}
+  - {fileID: 4828301990171372934}
+  - {fileID: 4828301990717714265}
+  - {fileID: 4828301990954784977}
+  - {fileID: 4828301989693270921}
+  - {fileID: 4828301990414621894}
+  - {fileID: 4828301989906589681}
+  - {fileID: 4828301991242935479}
+  - {fileID: 4828301991334027425}
+  - {fileID: 4828301991213841940}
+  - {fileID: 4828301991062387770}
+  - {fileID: 4828301990542697458}
+  - {fileID: 3840190651346175245}
+  - {fileID: 2537952764900368592}
+  - {fileID: 1982821267301535803}
+  - {fileID: 3242644907237653630}
+  - {fileID: 4828301990681273892}
+  - {fileID: 2447393266397419440}
+  - {fileID: 890264527581740235}
+  - {fileID: 2019149154617178501}
+  - {fileID: 7241456371280107635}
 --- !u!1 &4828301989672557668
 GameObject:
   m_ObjectHideFlags: 0
@@ -2627,7 +2649,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 8326851f15969094c873b800055bdfcd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2711,7 +2733,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 8326851f15969094c873b800055bdfcd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
