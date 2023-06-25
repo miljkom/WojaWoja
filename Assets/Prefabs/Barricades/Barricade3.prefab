@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ca54228397c1f548bccbf824f4acafe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 25
+  health: 20
   borkoDamage: 3
   enemyDamage: 1
   urosDamage: 3
