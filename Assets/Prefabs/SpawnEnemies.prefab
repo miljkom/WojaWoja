@@ -45,30 +45,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 309af83209406fc44afcf44729905c08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  advanced2Spawner:
-  - 55
-  - 62
-  - 79
-  - 106
-  - 114
-  - 123
-  - 125
-  advanced1Spawner:
-  - 16
-  - 24
-  - 43
-  - 68
-  - 74
-  - 83
-  - 87
-  - 91
-  - 96
-  - 105
-  - 107
-  - 109
-  - 115
-  - 113
-  - 122
   basicEnemies:
   - 0
   - 5
@@ -137,33 +113,46 @@ MonoBehaviour:
   - 121
   - 123
   - 124
-  advanced3Spawner:
-  - 33
-  - 51
-  - 68
-  - 100
-  - 102
-  - 112
-  - 118
+  - 124
   - 125
-  advanced4Spawner:
-  - 122
-  - 50
-  - 72
+  - 103.4
+  - 106.7
+  - 110.5
+  - 97.6
+  - 87
+  - 7
   friendly1Spawner:
-  - 5
-  - 10
+  - 51
+  - 96
+  - 112
+  - 122.6
   friendly2Spawner:
-  - 7
-  - 15
+  - 33
+  - 87
+  - 109
+  - 112.2
   friendly3Spawner:
-  - 5
+  - 16
+  - 74
+  - 105
+  - 114.3
   friendly4Spawner:
-  - 7
+  - 24
+  - 83
+  - 107
+  - 118.1
   friendly5Spawner:
-  - 11
+  - 43
+  - 91
+  - 111
+  - 120
   friendly6Spawner:
-  - 18
+  - 68
+  - 102
+  - 114
+  lanaSpawner:
+  - 62
+  - 113
   borko: {fileID: 5678477585441358742}
   enemiesSpawned: {fileID: 0}
 --- !u!82 &5678477585441358742
