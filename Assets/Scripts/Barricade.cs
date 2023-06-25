@@ -41,12 +41,6 @@ public class Barricade : MonoBehaviour
             StartCoroutine(LoseHealth());
         }
 
-        if (col.CompareTag("Lana"))
-        {
-            FindObjectOfType<Player>().AddLife();
-            Destroy(col.gameObject);
-        }
-        
         if (col.CompareTag("Uros"))
         {
             inside = true;

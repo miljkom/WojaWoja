@@ -326,14 +326,13 @@ GameObject:
   m_Component:
   - component: {fileID: 7755000379189681783}
   - component: {fileID: 3833124803893779688}
-  - component: {fileID: 8447381347870029876}
   - component: {fileID: 404408302785468429}
-  - component: {fileID: 4216960826513777060}
   - component: {fileID: 7603372053658391030}
   - component: {fileID: 1546551036964885875}
+  - component: {fileID: 6244701363932296509}
   m_Layer: 0
   m_Name: Lana
-  m_TagString: Enemy
+  m_TagString: Lana
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -382,22 +381,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.3956385, y: 1.9419961}
   m_EdgeRadius: 0
---- !u!114 &8447381347870029876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3358574256798413147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 824ecdc9ce94bc840b7aed17e7c0786f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnBulletsInSeconds: 3
-  enemyBullet: {fileID: 1240056195489929716, guid: 88ac592439f5b0f4e8346db9567597b8, type: 3}
-  spawnPointBorko: {fileID: 7006939094529008785}
-  borkoLimit: 5
 --- !u!50 &404408302785468429
 Rigidbody2D:
   serializedVersion: 4
@@ -419,21 +402,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4216960826513777060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3358574256798413147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 451c56f7a0e0cc441bdf70f1398ac922, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 4
-  health: 75
-  _canPass: 0
 --- !u!82 &7603372053658391030
 AudioSource:
   m_ObjectHideFlags: 0
@@ -565,6 +533,20 @@ MonoBehaviour:
   - {fileID: 890264527581740235}
   - {fileID: 2019149154617178501}
   - {fileID: 7241456371280107635}
+--- !u!114 &6244701363932296509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3358574256798413147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f583ff38ad60a674ead900d17bb807c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 1
+  health: 150
 --- !u!1 &3506065322372530301
 GameObject:
   m_ObjectHideFlags: 0

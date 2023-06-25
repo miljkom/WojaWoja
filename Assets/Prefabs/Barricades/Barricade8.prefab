@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4372266577692011782}
   - component: {fileID: 2001862862722450627}
   - component: {fileID: 157230266543790150}
+  - component: {fileID: 8426233010832283541}
   m_Layer: 0
   m_Name: Barricade8
   m_TagString: Blocker
@@ -150,3 +151,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.48, y: 10.126947}
   m_EdgeRadius: 0
+--- !u!114 &8426233010832283541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732482639510563350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a143cb6b7e3dcd45b4ad2d097d0af9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

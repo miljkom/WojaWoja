@@ -99,7 +99,7 @@ public class Player : Singleton<Player>
 
     public void AddLife()
     {
-        if (healthCounter < 4)
+        if (healthCounter < 5)
         {
             fullHearts[healthCounter].SetActive(true);
             healthCounter++;
