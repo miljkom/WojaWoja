@@ -2264,7 +2264,7 @@ MonoBehaviour:
   _animator: {fileID: 1915632657}
   spawnPointBullet: {fileID: 4195092940685671154}
   gigaSpawnPointBullet: {fileID: 4128346028518474981}
-  fillCooldowner: 0.1
+  fillCooldowner: 0.17
 --- !u!50 &2533252298453217192
 Rigidbody2D:
   serializedVersion: 4

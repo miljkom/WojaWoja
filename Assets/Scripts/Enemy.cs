@@ -29,7 +29,7 @@ public class Enemy : MonoBehaviour
         }
         if (health <= 0 && !_isDead)
         {
-            Player.Instance.charger += 0.1f;
+            Player.Instance.charger += 0.08f;
             KillEnemy();
             _isDead = true;
         }
@@ -94,6 +94,7 @@ public class Enemy : MonoBehaviour
     public void KillEnemy()
     {
         speed = 0;
+        GameManager.Instance.killCount++;
         GetComponentInChildren<Animator>().Play("BasicEnemy_Death");
         GetComponent<BoxCollider2D>().enabled = false;
     }
