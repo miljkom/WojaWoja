@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: VojaGlow
+  m_Name: VojaIndikatorGlow
   m_Shader: {fileID: -6465566751694194690, guid: e1a6d457197d2784c9c7e4ba9368ccb4, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -43,5 +43,5 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _ColorEmission: {r: 0, g: 193.38716, b: 1825.2128, a: 0}
+    - _ColorEmission: {r: 0.0009765625, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
