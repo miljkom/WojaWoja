@@ -23,6 +23,7 @@ public class GameManager : Singleton<GameManager>
     public List<GameObject> realBarricade;
     public GameObject tiredness;
     public GameObject charger;
+    public int killCount = 0;
     
     private int waypointsCount;
 
@@ -39,6 +40,10 @@ public class GameManager : Singleton<GameManager>
     private void Update()
     {
         chargerImage.fillAmount = Player.Instance.charger;
+        if (killCount == 98)
+        {
+            SceneManager.LoadScene("Scenes/WinScreen");
+        }
     }
 
     public void GameOver()
