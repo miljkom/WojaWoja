@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : Singleton<Player>
@@ -15,18 +16,22 @@ public class Player : Singleton<Player>
     [SerializeField] private AudioSource stani;
     [SerializeField] private float freshenUp;
     [SerializeField] private float relaxCooler;
+    [SerializeField] private List<GameObject> fullHearts;
 
     private Animator _animator;
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("EnemyBullet") || col.CompareTag("Enemy"))
         {
+
+            health--;
+            fullHearts[fullHearts.Count-1].SetActive(false);
+            fullHearts.RemoveAt(fullHearts.Count-1);
+            Destroy(col.gameObject);
             if (health <= 0)
             {
                 Destroy(gameObject);
             }
-            health--;
-            Destroy(col.gameObject);
             Debug.LogError("Game over");
         }
     }
