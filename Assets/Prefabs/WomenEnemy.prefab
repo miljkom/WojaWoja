@@ -1021,7 +1021,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 8326851f15969094c873b800055bdfcd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1892,6 +1892,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7336616924288181011}
+  - component: {fileID: 2267633790644064758}
   m_Layer: 0
   m_Name: WomenEnemy
   m_TagString: Untagged
@@ -1915,6 +1916,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2267633790644064758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7336616924288181010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86d2fe9159c3d5f46b4ce5cf44f512fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites: []
+  sprite: {fileID: 7336616923651899826}
 --- !u!1 &7336616924438641246
 GameObject:
   m_ObjectHideFlags: 0
