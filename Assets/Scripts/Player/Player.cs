@@ -10,11 +10,13 @@ public class Player : Singleton<Player>
     public float tiredness;
     public bool fresh = true;
     public float charger;
+    public bool chargerReadyFlag;
     private SpriteRenderer spriteRenderer;
     private SpriteRenderer spriteRendererGlow;
     private SpriteRenderer chargerRenderer;
     private float chargerPercent;
     [SerializeField] private AudioSource stani;
+    [SerializeField] private AudioSource chargerReady;
     [SerializeField] private float freshenUp;
     [SerializeField] private float relaxCooler;
     [SerializeField] private List<GameObject> fullHearts;
@@ -46,10 +48,19 @@ public class Player : Singleton<Player>
         charger = 0;
         _animator = GetComponentInChildren<Animator>();
         healthCounter = fullHearts.Count;
+        chargerReadyFlag = true;
     }
 
     private void Update()
     {
+        if (charger >= 1 && chargerReadyFlag)
+        {
+            if (!chargerReady.isPlaying)
+            {
+                chargerReady.Play();
+                chargerReadyFlag = false;
+            }
+        }
         if(tiredness > 0)
         {
             if (fresh)

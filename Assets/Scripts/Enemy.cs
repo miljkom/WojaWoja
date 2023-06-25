@@ -60,6 +60,12 @@ public class Enemy : MonoBehaviour
             speed = 0;
             GetComponentInChildren<Animator>().SetBool("IsWalking", false);
         }
+        if (col.CompareTag("LastBlocker"))
+        {
+            _canPass = false;
+            speed = 0;
+            GetComponentInChildren<Animator>().SetBool("IsWalking", false);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -67,6 +73,10 @@ public class Enemy : MonoBehaviour
         if (other.CompareTag("Blocker"))
         {
             _canPass = true;
+        }
+        if (other.CompareTag("LastBlocker"))
+        {
+            GameManager.Instance.GameOver();
         }
     }
 
