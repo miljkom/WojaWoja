@@ -28,10 +28,10 @@ public class GameManager : Singleton<GameManager>
     {
         Application.targetFrameRate = GameConstants.Instance.GameFps;
         waypointsCount = waypoints.Count;
-        for (int i = 0; i < barricade.Count; i++)
-        {
-            realBarricade[i] = Instantiate(barricade[i]);
-        }
+        //for (int i = 0; i < barricade.Count; i++)
+        //{
+           // realBarricade[i] = Instantiate(barricade[i]);
+        //}
     }
 
     private void Update()
