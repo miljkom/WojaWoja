@@ -18,7 +18,8 @@ public class Barricade : MonoBehaviour
     {
         if (health <= 0)
         {
-            GameManager.Instance.DestroyBarricade = true;
+            if (gameObject.CompareTag("LastBlocker"))
+                GameManager.Instance.GameOver();
             Destroy(gameObject);
         }
     }
@@ -36,6 +37,12 @@ public class Barricade : MonoBehaviour
             inside = true;
             isBorko = true;
             StartCoroutine(LoseHealth());
+        }
+
+        if (col.CompareTag("Lana"))
+        {
+            FindObjectOfType<Player>().AddLife();
+            Destroy(col.gameObject);
         }
     }
 

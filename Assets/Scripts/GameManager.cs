@@ -23,7 +23,6 @@ public class GameManager : Singleton<GameManager>
     public GameObject charger;
     
     private int waypointsCount;
-    public bool DestroyBarricade { get; set; }
 
     private void Start()
     {
@@ -38,6 +37,11 @@ public class GameManager : Singleton<GameManager>
     private void Update()
     {
         chargerImage.fillAmount = Player.Instance.charger;
+    }
+
+    public void GameOver()
+    {
+        //gameover
     }
     
 
