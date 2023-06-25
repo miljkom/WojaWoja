@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Player : Singleton<Player>
@@ -18,21 +19,23 @@ public class Player : Singleton<Player>
     [SerializeField] private float relaxCooler;
     [SerializeField] private List<GameObject> fullHearts;
 
+    private int healthCounter;
     private Animator _animator;
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("EnemyBullet"))
         {
-            Destroy(col.gameObject);
+
             health--;
+            healthCounter--;
+            fullHearts[healthCounter].SetActive(false);
+            Destroy(col.gameObject);
             if (health <= 0)
             {
                 GameManager.Instance.GameOver();
                 Destroy(gameObject);
+                Debug.LogError("Game over");
             }
-            fullHearts[fullHearts.Count-1].SetActive(false);
-            fullHearts.RemoveAt(fullHearts.Count-1);
-            Debug.LogError("Game over");
         }
     }
 
@@ -42,6 +45,7 @@ public class Player : Singleton<Player>
         //chargerRenderer = GameManager.Instance.charger.GetComponent<SpriteRenderer>();
         charger = 0;
         _animator = GetComponentInChildren<Animator>();
+        healthCounter = fullHearts.Count;
     }
 
     private void Update()
@@ -79,6 +83,15 @@ public class Player : Singleton<Player>
         if (chargerPercent >= 100)
         {
             //filled
+        }
+    }
+
+    public void AddLife()
+    {
+        if (healthCounter < 4)
+        {
+            fullHearts[healthCounter].SetActive(true);
+            healthCounter++;
         }
     }
 }

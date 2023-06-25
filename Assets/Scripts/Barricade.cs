@@ -38,6 +38,12 @@ public class Barricade : MonoBehaviour
             isBorko = true;
             StartCoroutine(LoseHealth());
         }
+
+        if (col.CompareTag("Lana"))
+        {
+            FindObjectOfType<Player>().AddLife();
+            Destroy(col.gameObject);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
