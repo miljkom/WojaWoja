@@ -13,6 +13,8 @@ public class Lana : MonoBehaviour
             health -= 25f;
             //GetComponentInChildren<Animator>().Play("BasicEnemy_Flich");
             //StartCoroutine(GetComponentInChildren<WhiteHit>().PlayWhiteHit(.2f));
+            FindObjectOfType<Player>().RemoveLife();
+            GetComponentInChildren<Animator>().Play("BasicEnemy_Flich");
             Destroy(col.gameObject);
 
             if (health <= 0)

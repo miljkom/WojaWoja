@@ -105,4 +105,16 @@ public class Player : Singleton<Player>
             healthCounter++;
         }
     }
+
+    public void RemoveLife()
+    {
+        if (healthCounter < 1)
+        {
+            //gameover
+            Destroy(gameObject);
+            return;
+        }
+        healthCounter--;
+        fullHearts[healthCounter].SetActive(false);
+    }
 }
