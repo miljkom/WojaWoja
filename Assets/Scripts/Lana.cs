@@ -14,6 +14,7 @@ public class Lana : MonoBehaviour
             //GetComponentInChildren<Animator>().Play("BasicEnemy_Flich");
             //StartCoroutine(GetComponentInChildren<WhiteHit>().PlayWhiteHit(.2f));
             FindObjectOfType<Player>().RemoveLife();
+            PostProcessingManager.Instance.VojaDamageEffect();
             GetComponentInChildren<Animator>().Play("BasicEnemy_Flich");
             Destroy(col.gameObject);
 
