@@ -61,7 +61,7 @@ MonoBehaviour:
   lana: {fileID: 3358574256798413147, guid: 841ead1085217d34ea820f3d535fccd3, type: 3}
   voja: {fileID: 0}
   chargerImage: {fileID: 0}
-  chargerDamage: 0
+  chargerDamage: 75
   barricade:
   - {fileID: 732482639510563350, guid: 0d35597bfa26d8344be0db6d02b333b3, type: 3}
   - {fileID: 732482639510563350, guid: 2c04252e5142ead478df4952ee9b70ac, type: 3}
