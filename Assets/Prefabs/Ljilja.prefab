@@ -347,7 +347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  health: 75
+  health: 50
   _canPass: 0
 --- !u!82 &7603372053658391030
 AudioSource:

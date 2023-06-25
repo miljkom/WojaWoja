@@ -1359,33 +1359,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 854893487}
     - target: {fileID: 4767405378390167314, guid: 7de653d9d5ebf0243a2e021fad0155b8, type: 3}
-      propertyPath: tireness
-      value: 
-      objectReference: {fileID: 1286419992}
-    - target: {fileID: 4767405378390167314, guid: 7de653d9d5ebf0243a2e021fad0155b8, type: 3}
-      propertyPath: barricade
-      value: 
-      objectReference: {fileID: 930273646611112914, guid: c9215cf4a53b00149bed3fbd0fcdb75a, type: 3}
-    - target: {fileID: 4767405378390167314, guid: 7de653d9d5ebf0243a2e021fad0155b8, type: 3}
       propertyPath: tiredness
       value: 
       objectReference: {fileID: 1286419992}
     - target: {fileID: 4767405378390167314, guid: 7de653d9d5ebf0243a2e021fad0155b8, type: 3}
-      propertyPath: chargerText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4767405378390167314, guid: 7de653d9d5ebf0243a2e021fad0155b8, type: 3}
       propertyPath: chargerImage
       value: 
       objectReference: {fileID: 1028081315}
-    - target: {fileID: 4767405378390167314, guid: 7de653d9d5ebf0243a2e021fad0155b8, type: 3}
-      propertyPath: tirednessGlow
-      value: 
-      objectReference: {fileID: 1346938105}
-    - target: {fileID: 4767405378390167314, guid: 7de653d9d5ebf0243a2e021fad0155b8, type: 3}
-      propertyPath: waypoints.Array.size
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 4767405378390167314, guid: 7de653d9d5ebf0243a2e021fad0155b8, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
@@ -2203,11 +2183,6 @@ GameObject:
 --- !u!1 &1286419992 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5549009017535909480, guid: 7c3b70f4a1d719f45b2ee4e250462f65, type: 3}
-  m_PrefabInstance: {fileID: 854893486}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1346938105 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1071140791135432916, guid: 7c3b70f4a1d719f45b2ee4e250462f65, type: 3}
   m_PrefabInstance: {fileID: 854893486}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1393210792 stripped
