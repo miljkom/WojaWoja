@@ -165,6 +165,7 @@ MonoBehaviour:
   friendly6Spawner:
   - 18
   borko: {fileID: 5678477585441358742}
+  enemiesSpawned: {fileID: 0}
 --- !u!82 &5678477585441358742
 AudioSource:
   m_ObjectHideFlags: 0
