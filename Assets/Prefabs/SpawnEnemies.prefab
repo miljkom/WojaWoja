@@ -160,6 +160,8 @@ MonoBehaviour:
   - 5
   friendly4Spawner:
   - 7
+  friendly5Spawner:
+  - 11
   borko: {fileID: 5678477585441358742}
 --- !u!82 &5678477585441358742
 AudioSource:

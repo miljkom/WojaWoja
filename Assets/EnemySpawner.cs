@@ -16,6 +16,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private List<float> friendly2Spawner;
     [SerializeField] private List<float> friendly3Spawner;
     [SerializeField] private List<float> friendly4Spawner;
+    [SerializeField] private List<float> friendly5Spawner;
     [SerializeField] private AudioSource borko;
 
     private void Update()
@@ -71,6 +72,14 @@ public class EnemySpawner : MonoBehaviour
             {
                 friendly4Spawner.RemoveAt(0);
                 GameManager.Instance.SpawnFriendly4();
+            }
+        }
+        if (friendly5Spawner.Count > 0)
+        {
+            if (time > friendly5Spawner[0])
+            {
+                friendly5Spawner.RemoveAt(0);
+                GameManager.Instance.SpawnFriendly5();
             }
         }
 

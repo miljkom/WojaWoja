@@ -60,6 +60,7 @@ MonoBehaviour:
   friendly2: {fileID: 3358574256798413147, guid: 2e09b968887827541ad7a3961966055a, type: 3}
   friendly3: {fileID: 3358574256798413147, guid: edc4cff58d9146a4b8b165f7031bf691, type: 3}
   friendly4: {fileID: 3358574256798413147, guid: 0fc6416cbaeb79c40ad51466169cb095, type: 3}
+  friendly5: {fileID: 3358574256798413147, guid: 8bdd29a7653f2ad4a9b2f423c1c7b1dd, type: 3}
   voja: {fileID: 1784964433545604526, guid: 7c3b70f4a1d719f45b2ee4e250462f65, type: 3}
   chargerImage: {fileID: 0}
   chargerDamage: 0

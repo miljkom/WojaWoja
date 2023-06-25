@@ -16,6 +16,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private GameObject friendly2;
     [SerializeField] private GameObject friendly3;
     [SerializeField] private GameObject friendly4;
+    [SerializeField] private GameObject friendly5;
     [SerializeField] public GameObject voja;
     [SerializeField] private Image chargerImage;
     public float chargerDamage;
@@ -75,8 +76,10 @@ public class GameManager : Singleton<GameManager>
     {
         Instantiate(friendly4, waypoints[Random.Range(0, waypointsCount)].transform.position, Quaternion.identity);
     }
-
-
+    public void SpawnFriendly5()
+    {
+        Instantiate(friendly5, waypoints[Random.Range(0, waypointsCount)].transform.position, Quaternion.identity);
+    }
     public void SpawnAdvanced3()
     {
         Instantiate(advanced3, waypoints[Random.Range(0, waypointsCount)].transform.position, Quaternion.identity);
