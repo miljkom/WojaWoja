@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
@@ -42,7 +43,7 @@ public class GameManager : Singleton<GameManager>
 
     public void GameOver()
     {
-        //gameover
+        SceneManager.LoadScene("EndScreen");
     }
     
 
