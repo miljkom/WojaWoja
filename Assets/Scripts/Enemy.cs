@@ -21,15 +21,19 @@ public class Enemy : MonoBehaviour
     
     private void Update()
     {
+        if (gameObject.CompareTag("LastBlocker") && health <= 0)
+        {
+            GameManager.Instance.GameOver();
+        }
         if (health <= 0 && !_isDead)
         {
             Player.Instance.charger += 0.1f;
-            _isDead = true;
             KillEnemy();
+            _isDead = true;
         }
         //transform.position = Vector3.MoveTowards(transform.position, GameManager.Instance.voja.transform.position, speed * Time.deltaTime); 
         transform.Translate(Vector3.left * speed * Time.deltaTime);
-        if (GameManager.Instance.realBarricade.Any(x => x.IsDestroyed()))
+        if (GameManager.Instance.realBarricade.Any(x => x.IsDestroyed()) && !_isDead)
         {
             if (_canPass)
             {
@@ -53,6 +57,8 @@ public class Enemy : MonoBehaviour
         if (col.gameObject.CompareTag("Charger"))
         {
             health -= GameManager.Instance.chargerDamage;
+            GetComponentInChildren<Animator>().Play("BasicEnemy_Flich");
+            StartCoroutine(GetComponentInChildren<WhiteHit>().PlayWhiteHit(.2f));
         }
         if (col.CompareTag("Blocker"))
         {
@@ -73,10 +79,6 @@ public class Enemy : MonoBehaviour
         if (other.CompareTag("Blocker"))
         {
             _canPass = true;
-        }
-        if (other.CompareTag("LastBlocker"))
-        {
-            GameManager.Instance.GameOver();
         }
     }
 
