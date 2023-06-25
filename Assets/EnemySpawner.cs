@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -19,6 +20,9 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private List<float> friendly5Spawner;
     [SerializeField] private List<float> friendly6Spawner;
     [SerializeField] private AudioSource borko;
+    [SerializeField] private TextMeshProUGUI enemiesSpawned;
+
+    private int _enemies = 100;
 
     private void Update()
     {
@@ -29,6 +33,7 @@ public class EnemySpawner : MonoBehaviour
             {
                 advanced1Spawner.RemoveAt(0);
                 GameManager.Instance.SpawnAdvanced1();
+                UpdateEnemiesUI();
             }
         }
 
@@ -38,6 +43,7 @@ public class EnemySpawner : MonoBehaviour
             {
                 basicEnemies.RemoveAt(0);
                 GameManager.Instance.SpawnNormal();
+                UpdateEnemiesUI();
             }
         }
 
@@ -49,6 +55,7 @@ public class EnemySpawner : MonoBehaviour
                 if(!borko.isPlaying)
                     borko.Play();
                 GameManager.Instance.SpawnFriendly1();
+                UpdateEnemiesUI();
             }
         }
         if (friendly2Spawner.Count > 0)
@@ -57,6 +64,7 @@ public class EnemySpawner : MonoBehaviour
             {
                 friendly2Spawner.RemoveAt(0);
                 GameManager.Instance.SpawnFriendly2();
+                UpdateEnemiesUI();
             }
         }
         if (friendly3Spawner.Count > 0)
@@ -65,6 +73,7 @@ public class EnemySpawner : MonoBehaviour
             {
                 friendly3Spawner.RemoveAt(0);
                 GameManager.Instance.SpawnFriendly3();
+                UpdateEnemiesUI();
             }
         }
         if (friendly4Spawner.Count > 0)
@@ -98,6 +107,7 @@ public class EnemySpawner : MonoBehaviour
             {
                 advanced2Spawner.RemoveAt(0);
                 GameManager.Instance.SpawnAdvanced2();
+                UpdateEnemiesUI();
             }
         }
 
@@ -107,6 +117,7 @@ public class EnemySpawner : MonoBehaviour
             {
                 advanced3Spawner.RemoveAt(0);
                 GameManager.Instance.SpawnAdvanced3();
+                UpdateEnemiesUI();
             }
         }
         
@@ -116,7 +127,14 @@ public class EnemySpawner : MonoBehaviour
             {
                 advanced3Spawner.RemoveAt(0);
                 GameManager.Instance.SpawnAdvanced4();
+                UpdateEnemiesUI();
             }
         }
+    }
+
+    private void UpdateEnemiesUI()
+    {
+        _enemies--;
+        enemiesSpawned.text = _enemies.ToString();
     }
 }

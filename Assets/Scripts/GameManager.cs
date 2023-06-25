@@ -19,7 +19,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private GameObject friendly5;
     [SerializeField] private GameObject friendly6;
     [SerializeField] public GameObject voja;
-    [SerializeField] private Image chargerImage;
+    //[SerializeField] private Image chargerImage;
     public float chargerDamage;
     public List<GameObject> barricade;
     public List<GameObject> realBarricade;
@@ -41,7 +41,7 @@ public class GameManager : Singleton<GameManager>
 
     private void Update()
     {
-        chargerImage.fillAmount = Player.Instance.charger;
+        //chargerImage.fillAmount = Player.Instance.charger;
     }
     
 
