@@ -33,9 +33,7 @@ public class Enemy : MonoBehaviour
         {
             if (_canPass)
             {
-                speed = 2f;
-                if(gameObject.CompareTag("Borko"))
-                    speed = 6f;
+                speed = startingSpeed;
                 GetComponentInChildren<Animator>().SetBool("IsWalking", true);
             }
 
