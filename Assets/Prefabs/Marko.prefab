@@ -703,6 +703,7 @@ GameObject:
   - component: {fileID: 4828301989955152205}
   - component: {fileID: 970644804403151603}
   - component: {fileID: 3758986665973592002}
+  - component: {fileID: 6445016501236819269}
   m_Layer: 0
   m_Name: BasicEnemyScale
   m_TagString: Untagged
@@ -769,6 +770,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 835c8473a94a999408c0300b82044210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6445016501236819269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4828301989955152207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e0c3fab37bf3444bcf7cbb3138d5df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4828301989961540538
