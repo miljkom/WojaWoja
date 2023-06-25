@@ -99,11 +99,13 @@ public class Player : Singleton<Player>
 
     public void AddLife()
     {
-        if (healthCounter < 5)
+        while (healthCounter < 5)
         {
             fullHearts[healthCounter].SetActive(true);
             healthCounter++;
         }
+
+        health = 5f;
     }
 
     public void RemoveLife()
@@ -115,6 +117,7 @@ public class Player : Singleton<Player>
             return;
         }
         healthCounter--;
+        health--;
         fullHearts[healthCounter].SetActive(false);
     }
 }
