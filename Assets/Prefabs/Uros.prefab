@@ -45,7 +45,6 @@ GameObject:
   - component: {fileID: 4216960826513777060}
   - component: {fileID: 7603372053658391030}
   - component: {fileID: 1546551036964885875}
-  - component: {fileID: 5634286858345870910}
   m_Layer: 0
   m_Name: Uros
   m_TagString: Enemy
@@ -62,7 +61,7 @@ Transform:
   m_GameObject: {fileID: 3358574256798413147}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8.71, y: 0.47, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7006939094529008785}
@@ -129,8 +128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451c56f7a0e0cc441bdf70f1398ac922, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  health: 75
+  speed: 2.5
+  health: 300
   _canPass: 0
 --- !u!82 &7603372053658391030
 AudioSource:
@@ -241,22 +240,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites: []
---- !u!114 &5634286858345870910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3358574256798413147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 824ecdc9ce94bc840b7aed17e7c0786f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnBulletsInSeconds: 3
-  enemyBullet: {fileID: 1240056195489929716, guid: 88ac592439f5b0f4e8346db9567597b8, type: 3}
-  spawnPointBorko: {fileID: 7006939094529008785}
-  borkoLimit: 0
 --- !u!1 &4828301989672557668
 GameObject:
   m_ObjectHideFlags: 0

@@ -1024,6 +1024,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6650356238381193268, guid: 57dcd1fac2656db46bea609fce8e538d, type: 3}
+      propertyPath: friendly6Spawner.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650356238381193268, guid: 57dcd1fac2656db46bea609fce8e538d, type: 3}
+      propertyPath: friendly6Spawner.Array.data[0]
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 6650356238381193269, guid: 57dcd1fac2656db46bea609fce8e538d, type: 3}
       propertyPath: m_RootOrder
       value: 9
