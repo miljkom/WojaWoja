@@ -18,7 +18,8 @@ public class Barricade : MonoBehaviour
     {
         if (health <= 0)
         {
-            GameManager.Instance.DestroyBarricade = true;
+            if (gameObject.CompareTag("LastBlocker"))
+                GameManager.Instance.GameOver();
             Destroy(gameObject);
         }
     }

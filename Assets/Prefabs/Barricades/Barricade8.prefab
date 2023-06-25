@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 157230266543790150}
   m_Layer: 0
   m_Name: Barricade8
-  m_TagString: Blocker
+  m_TagString: LastBlocker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
