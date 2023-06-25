@@ -13,7 +13,7 @@ public class SplashScreen : MonoBehaviour
     {
         playButton.onClick.AddListener((() =>
         {
-            SceneManager.LoadScene("Scenes/FINALSCENE");
+            SceneManager.LoadScene("Scenes/ControlScene");
         }));
     }
 }
