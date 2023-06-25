@@ -445,7 +445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnBulletsInSeconds: 3
-  enemyBullet: {fileID: 1240056195489929716, guid: 113593f3e39e0c34ebb656e9f60390a8, type: 3}
+  enemyBullet: {fileID: 1240056195489929716, guid: efb57618d4a3f074fb8d0b291ffb31a4, type: 3}
   spawnPointBorko: {fileID: 7006939094529008785}
   borkoLimit: 0
 --- !u!1 &4360626658763321737
