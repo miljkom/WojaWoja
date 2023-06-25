@@ -45,7 +45,7 @@ public class Enemy : MonoBehaviour
 
         if (col.gameObject.CompareTag("Charger"))
         {
-            health -= 50f;
+            health -= GameManager.Instance.chargerDamage;
         }
         if (col.CompareTag("Blocker"))
         {

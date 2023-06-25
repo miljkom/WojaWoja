@@ -16,10 +16,13 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private GameObject friendly2;
     [SerializeField] public GameObject voja;
     [SerializeField] private Image chargerImage;
+
+    public float chargerDamage;
     public GameObject barricade;
     public GameObject realBarricade;
     public GameObject tiredness;
-
+    public GameObject charger;
+    
     private int waypointsCount;
     public bool DestroyBarricade { get; set; }
 

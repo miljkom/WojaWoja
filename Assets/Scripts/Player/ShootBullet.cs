@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using Unity.Mathematics;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -18,6 +17,7 @@ public class ShootBullet : MonoBehaviour
     [SerializeField] private Animator _animator;
     [SerializeField] private Transform spawnPointBullet;
     [SerializeField] private Transform gigaSpawnPointBullet;
+    [SerializeField] private float fillCooldowner;
     private List<GameObject> maybeRandom = new List<GameObject>();
     private List<AudioSource> audioRandom = new List<AudioSource>();
 
@@ -43,7 +43,7 @@ public class ShootBullet : MonoBehaviour
                 audioRandom[randomIndex].Play();
             }
             _animator.Play("Voja_IndikatorScale");
-            Player.Instance.tiredness += 0.1f;
+            Player.Instance.tiredness += fillCooldowner;
         }
         if(Input.GetKeyDown(KeyCode.F) && Player.Instance.charger >= 1f)
         {
