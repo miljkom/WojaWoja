@@ -401,10 +401,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1286419992}
     - target: {fileID: 4767405378390167314, guid: 7de653d9d5ebf0243a2e021fad0155b8, type: 3}
-      propertyPath: barricade
-      value: 
-      objectReference: {fileID: 930273646611112914, guid: c9215cf4a53b00149bed3fbd0fcdb75a, type: 3}
-    - target: {fileID: 4767405378390167314, guid: 7de653d9d5ebf0243a2e021fad0155b8, type: 3}
       propertyPath: tiredness
       value: 
       objectReference: {fileID: 1286419992}

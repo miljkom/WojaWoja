@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ public class Enemy : MonoBehaviour
 
     private float startingSpeed;
     private bool _isDead = false;
+    public bool _canPass = false;
     
     private void Awake()
     {
@@ -27,10 +29,14 @@ public class Enemy : MonoBehaviour
         }
         //transform.position = Vector3.MoveTowards(transform.position, GameManager.Instance.voja.transform.position, speed * Time.deltaTime); 
         transform.Translate(Vector3.left * speed * Time.deltaTime);
-        if (GameManager.Instance.realBarricade.IsDestroyed())
+        if (GameManager.Instance.realBarricade.Any(x => x.IsDestroyed()))
         {
-            speed = 2f;
-            GetComponentInChildren<Animator>().SetBool("IsWalking", true);
+            if (_canPass)
+            {
+                speed = startingSpeed;
+                GetComponentInChildren<Animator>().SetBool("IsWalking", true);
+            }
+
         }
     }
 
@@ -54,11 +60,11 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Blocker"))
         {
-            speed = 2f;
+            _canPass = true;
         }
     }
 
