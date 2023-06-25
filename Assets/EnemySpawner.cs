@@ -70,6 +70,7 @@ public class EnemySpawner : MonoBehaviour
             {
                 friendly4Spawner.RemoveAt(0);
                 GameManager.Instance.SpawnFriendly4();
+                UpdateEnemiesUI();
             }
         }
         if (friendly5Spawner.Count > 0)
@@ -78,6 +79,7 @@ public class EnemySpawner : MonoBehaviour
             {
                 friendly5Spawner.RemoveAt(0);
                 GameManager.Instance.SpawnFriendly5();
+                UpdateEnemiesUI();
             }
         }
         if (friendly6Spawner.Count > 0)
@@ -86,6 +88,7 @@ public class EnemySpawner : MonoBehaviour
             {
                 friendly6Spawner.RemoveAt(0);
                 GameManager.Instance.SpawnFriendly6();
+                UpdateEnemiesUI();
             }
         }
         
@@ -95,6 +98,7 @@ public class EnemySpawner : MonoBehaviour
             {
                 lanaSpawner.RemoveAt(0);
                 GameManager.Instance.SpawnLana();
+                UpdateEnemiesUI();
             }
         }
     }
