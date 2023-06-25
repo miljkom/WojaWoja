@@ -239,7 +239,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86d2fe9159c3d5f46b4ce5cf44f512fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprites: []
+  sprites:
+  - {fileID: 4828301991673902719}
+  - {fileID: 4828301991066052335}
+  - {fileID: 4828301990171372934}
+  - {fileID: 4828301990717714265}
+  - {fileID: 4828301990954784977}
+  - {fileID: 4828301990414621894}
+  - {fileID: 4828301989906589681}
+  - {fileID: 4828301991242935479}
+  - {fileID: 4828301991334027425}
+  - {fileID: 4828301991213841940}
+  - {fileID: 4828301991062387770}
+  - {fileID: 2537952764900368592}
+  - {fileID: 4828301990681273892}
 --- !u!1 &4828301989672557668
 GameObject:
   m_ObjectHideFlags: 0
