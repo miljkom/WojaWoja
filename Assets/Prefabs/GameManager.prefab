@@ -57,9 +57,10 @@ MonoBehaviour:
   advanced3: {fileID: 3358574256798413147, guid: d430ea47a2e033c40b84209df171e88d, type: 3}
   advanced4: {fileID: 3358574256798413147, guid: 01be53a2ae8cb2d4daa1c4ab8ef7d48e, type: 3}
   friendly1: {fileID: 3358574256798413147, guid: fa993b365228c594ebce6edbfa01a277, type: 3}
-  friendly2: {fileID: 0}
+  friendly2: {fileID: 3358574256798413147, guid: 2e09b968887827541ad7a3961966055a, type: 3}
   voja: {fileID: 1784964433545604526, guid: 7c3b70f4a1d719f45b2ee4e250462f65, type: 3}
   chargerImage: {fileID: 0}
+  chargerDamage: 0
   barricade:
   - {fileID: 732482639510563350, guid: 0d35597bfa26d8344be0db6d02b333b3, type: 3}
   - {fileID: 732482639510563350, guid: 2c04252e5142ead478df4952ee9b70ac, type: 3}
@@ -77,3 +78,4 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   tiredness: {fileID: 0}
+  charger: {fileID: 0}

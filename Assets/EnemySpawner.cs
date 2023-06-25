@@ -13,6 +13,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private List<float> advanced3Spawner;
     [SerializeField] private List<float> advanced4Spawner;
     [SerializeField] private List<float> friendly1Spawner;
+    [SerializeField] private List<float> friendly2Spawner;
     [SerializeField] private AudioSource borko;
 
     private void Update()
@@ -44,6 +45,14 @@ public class EnemySpawner : MonoBehaviour
                 if(!borko.isPlaying)
                     borko.Play();
                 GameManager.Instance.SpawnFriendly1();
+            }
+        }
+        if (friendly2Spawner.Count > 0)
+        {
+            if (time > friendly2Spawner[0])
+            {
+                friendly2Spawner.RemoveAt(0);
+                GameManager.Instance.SpawnFriendly2();
             }
         }
 

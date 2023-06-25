@@ -61,6 +61,10 @@ public class GameManager : Singleton<GameManager>
     {
         Instantiate(friendly1, waypoints[Random.Range(0, waypointsCount)].transform.position, Quaternion.identity);
     }
+    public void SpawnFriendly2()
+    {
+        Instantiate(friendly2, waypoints[Random.Range(0, waypointsCount)].transform.position, Quaternion.identity);
+    }
 
 
     public void SpawnAdvanced3()
