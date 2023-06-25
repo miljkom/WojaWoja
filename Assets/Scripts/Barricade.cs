@@ -16,6 +16,12 @@ public class Barricade : MonoBehaviour
     private bool isBorko;
     private bool isUros;
 
+    private SpriteRenderer sprite;
+
+    void Start()
+    {
+        sprite = GetComponent<SpriteRenderer>();
+    }
     private void Update()
     {
         if (health <= 0)
@@ -94,6 +100,7 @@ public class Barricade : MonoBehaviour
             {
                 health -= enemyDamage;
             }
+            StartCoroutine(PlayRedHit(.1f));
             Debug.Log(health);
             yield return new WaitForSeconds(1f);
         }
@@ -102,5 +109,25 @@ public class Barricade : MonoBehaviour
             yield break;
         }
         StartCoroutine(LoseHealth());
+    }
+    public IEnumerator PlayRedHit(float duration)
+    {
+        float intensity = 0f;
+        var elapsedTime = 0f;
+        while(elapsedTime < duration)
+        {
+            float currentValue = Mathf.Lerp(intensity, .5f, elapsedTime / duration);
+            sprite.material.SetFloat("_Intensity", currentValue);
+            elapsedTime += Time.deltaTime;
+            yield return null;  
+        }
+        elapsedTime = 0f;
+        while(elapsedTime < duration)
+        {
+            float currentValue = Mathf.Lerp(intensity, 0, elapsedTime / duration);
+            sprite.material.SetFloat("_Intensity", currentValue);
+            elapsedTime += Time.deltaTime;
+            yield return null;  
+        }
     }
 }
