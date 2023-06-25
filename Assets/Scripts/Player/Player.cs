@@ -61,6 +61,11 @@ public class Player : Singleton<Player>
                 chargerReadyFlag = false;
             }
         }
+
+        if (health <= 0)
+        {
+            GameManager.Instance.GameOver();
+        }
         if(tiredness > 0)
         {
             if (fresh)
