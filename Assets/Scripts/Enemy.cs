@@ -46,7 +46,7 @@ public class Enemy : MonoBehaviour
         {
             health -= 25f;
             GetComponentInChildren<Animator>().Play("BasicEnemy_Flich");
-            GetComponentInChildren<WhiteHit>().PlayWhiteHit(.2f);
+            StartCoroutine(GetComponentInChildren<WhiteHit>().PlayWhiteHit(.2f));
             Destroy(col.gameObject);
         }
 
