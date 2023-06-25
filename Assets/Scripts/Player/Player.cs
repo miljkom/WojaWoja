@@ -120,12 +120,11 @@ public class Player : Singleton<Player>
         if (healthCounter < 1)
         {
             //gameover
+            GameManager.Instance.GameOver();
             Destroy(gameObject);
             return;
         }
-
         
-
         healthCounter--;
         health--;
         fullHearts[healthCounter].SetActive(false);
