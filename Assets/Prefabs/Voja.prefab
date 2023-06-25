@@ -2331,8 +2331,8 @@ MonoBehaviour:
   chargerReadyFlag: 0
   stani: {fileID: 1638792318951926671}
   chargerReady: {fileID: 7853451370639492609}
-  freshenUp: 0.1
-  relaxCooler: 0.25
+  freshenUp: 0.25
+  relaxCooler: 0.5
   fullHearts:
   - {fileID: 0}
   - {fileID: 0}

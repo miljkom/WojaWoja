@@ -27,7 +27,7 @@ public class Player : Singleton<Player>
     {
         if (col.CompareTag("EnemyBullet"))
         {
-
+            PostProcessingManager.Instance.VojaDamageEffect();
             health--;
             healthCounter--;
             fullHearts[healthCounter].SetActive(false);
@@ -116,6 +116,9 @@ public class Player : Singleton<Player>
             Destroy(gameObject);
             return;
         }
+
+        
+
         healthCounter--;
         health--;
         fullHearts[healthCounter].SetActive(false);

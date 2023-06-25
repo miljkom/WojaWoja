@@ -15,9 +15,10 @@ public class PostProcessingManager : PersistentSingleton<PostProcessingManager>
         _postProcessingVolume.profile.TryGet(out _vignette);
         _postProcessingVolume.profile.TryGet(out _chromaticAberration);
     }
-    public IEnumerator VignetteController(float intensity, float duration)
+    private IEnumerator VignetteController(float intensity, float duration)
     {
         float elapsedTime = 0f;
+        _vignette.color.value = Color.red;
         while (elapsedTime < duration)
         {
             float currentValue = Mathf.Lerp(_vignette.intensity.value, intensity, elapsedTime / duration);
@@ -33,8 +34,9 @@ public class PostProcessingManager : PersistentSingleton<PostProcessingManager>
             elapsedTime += Time.deltaTime;
             yield return null;  
         }
+        _vignette.color.value = Color.black;
     }
-    public IEnumerator ChromaticController(float intensity, float duration)
+    private IEnumerator ChromaticController(float intensity, float duration)
     {
         float elapsedTime = 0f;
         while (elapsedTime < duration)
@@ -53,12 +55,8 @@ public class PostProcessingManager : PersistentSingleton<PostProcessingManager>
             yield return null;  
         }
     }
-    private void Update() {
-        if(Input.GetKeyDown(KeyCode.K))
-        {
-            StartCoroutine(VignetteController(.5f,.075f));
-            StartCoroutine(ChromaticController(.25f,.075f));
-
-        }
+    public void VojaDamageEffect() {
+            StartCoroutine(VignetteController(.5f,.175f));
+            StartCoroutine(ChromaticController(.25f,.175f));
     }
 }
