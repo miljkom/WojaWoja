@@ -209,14 +209,14 @@ GameObject:
   m_Component:
   - component: {fileID: 7755000379189681783}
   - component: {fileID: 3833124803893779688}
-  - component: {fileID: 8447381347870029876}
   - component: {fileID: 404408302785468429}
   - component: {fileID: 4216960826513777060}
   - component: {fileID: 7603372053658391030}
   - component: {fileID: 1546551036964885875}
+  - component: {fileID: 5634286858345870910}
   m_Layer: 0
   m_Name: Marko
-  m_TagString: Borko
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -251,7 +251,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.006866932, y: 0.2849517}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -262,24 +262,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.3982458, y: 2.2153358}
   m_EdgeRadius: 0
---- !u!114 &8447381347870029876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3358574256798413147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 824ecdc9ce94bc840b7aed17e7c0786f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnBulletsInSeconds: 0.2
-  enemyBullet: {fileID: 1240056195489929716, guid: 6c78c5a0d3c38de4ab8cba66daff18cf, type: 3}
-  spawnPointBorko: {fileID: 7006939094529008785}
-  borkoLimit: 5
 --- !u!50 &404408302785468429
 Rigidbody2D:
   serializedVersion: 4
@@ -313,7 +297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451c56f7a0e0cc441bdf70f1398ac922, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 3
   health: 75
   _canPass: 0
 --- !u!82 &7603372053658391030
@@ -425,6 +409,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites: []
+--- !u!114 &5634286858345870910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3358574256798413147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 824ecdc9ce94bc840b7aed17e7c0786f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnBulletsInSeconds: 3
+  enemyBullet: {fileID: 1240056195489929716, guid: 88ac592439f5b0f4e8346db9567597b8, type: 3}
+  spawnPointBorko: {fileID: 7006939094529008785}
+  borkoLimit: 0
 --- !u!1 &4360626658763321737
 GameObject:
   m_ObjectHideFlags: 0
