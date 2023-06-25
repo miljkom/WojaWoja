@@ -54,6 +54,7 @@ public class ShootBullet : MonoBehaviour
                 gigaOtkaz.Play();
             }
             Player.Instance.charger = 0;
+            Player.Instance.chargerReadyFlag = true;
         }
     }
 }
