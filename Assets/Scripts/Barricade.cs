@@ -8,6 +8,8 @@ using UnityEngine;
 public class Barricade : MonoBehaviour
 {
     [SerializeField] private float health;
+    [SerializeField] private float borkoDamage = 3f;
+    [SerializeField] private float enemyDamage = 1f;
 
     private bool inside;
     private bool isBorko;
@@ -65,11 +67,11 @@ public class Barricade : MonoBehaviour
         {
             if (isBorko)
             {
-                health -= 5f;
+                health -= borkoDamage;
             }
             else
             {
-                health -= 1f;
+                health -= enemyDamage;
             }
             Debug.Log(health);
             yield return new WaitForSeconds(1f);
