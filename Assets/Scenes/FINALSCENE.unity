@@ -1724,6 +1724,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barricade8
       objectReference: {fileID: 0}
+    - target: {fileID: 732482639510563350, guid: 2c2a71f5516026c41b7b2fc99f19c831, type: 3}
+      propertyPath: m_TagString
+      value: LastBlocker
+      objectReference: {fileID: 0}
     - target: {fileID: 1073556311784853965, guid: 2c2a71f5516026c41b7b2fc99f19c831, type: 3}
       propertyPath: m_RootOrder
       value: 1
